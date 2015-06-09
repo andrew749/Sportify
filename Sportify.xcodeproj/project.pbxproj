@@ -13,6 +13,15 @@
 		B01EF3E21B1D478D005A17B3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B01EF3E11B1D478D005A17B3 /* Images.xcassets */; };
 		B01EF3E51B1D478D005A17B3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B01EF3E31B1D478D005A17B3 /* LaunchScreen.xib */; };
 		B01EF3F11B1D478D005A17B3 /* SportifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01EF3F01B1D478D005A17B3 /* SportifyTests.swift */; };
+		B02D04601B2661470019074F /* Football.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02D045F1B2661470019074F /* Football.swift */; };
+		B02D04631B266BC30019074F /* SoccerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02D04621B266BC30019074F /* SoccerView.swift */; };
+		B0693E951B215021005F1D93 /* SportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0693E941B215021005F1D93 /* SportViewController.swift */; };
+		B0693E971B215048005F1D93 /* Sport.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0693E961B215048005F1D93 /* Sport.swift */; };
+		B0693E991B21511E005F1D93 /* Baseball.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0693E981B21511E005F1D93 /* Baseball.swift */; };
+		B0693E9D1B215150005F1D93 /* Soccer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0693E9C1B215150005F1D93 /* Soccer.swift */; };
+		B0693E9F1B2152D5005F1D93 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0693E9E1B2152D5005F1D93 /* Team.swift */; };
+		B0693EA11B2158D6005F1D93 /* SportTypeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0693EA01B2158D6005F1D93 /* SportTypeEnum.swift */; };
+		B0B2E7AC1B2670C500952C9E /* SportsOptionPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B2E7AB1B2670C500952C9E /* SportsOptionPicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +45,15 @@
 		B01EF3EA1B1D478D005A17B3 /* SportifyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SportifyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B01EF3EF1B1D478D005A17B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B01EF3F01B1D478D005A17B3 /* SportifyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportifyTests.swift; sourceTree = "<group>"; };
+		B02D045F1B2661470019074F /* Football.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Football.swift; sourceTree = "<group>"; };
+		B02D04621B266BC30019074F /* SoccerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoccerView.swift; sourceTree = "<group>"; };
+		B0693E941B215021005F1D93 /* SportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportViewController.swift; sourceTree = "<group>"; };
+		B0693E961B215048005F1D93 /* Sport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sport.swift; sourceTree = "<group>"; };
+		B0693E981B21511E005F1D93 /* Baseball.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Baseball.swift; sourceTree = "<group>"; };
+		B0693E9C1B215150005F1D93 /* Soccer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Soccer.swift; sourceTree = "<group>"; };
+		B0693E9E1B2152D5005F1D93 /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		B0693EA01B2158D6005F1D93 /* SportTypeEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportTypeEnum.swift; sourceTree = "<group>"; };
+		B0B2E7AB1B2670C500952C9E /* SportsOptionPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportsOptionPicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +97,11 @@
 			children = (
 				B01EF3DA1B1D478D005A17B3 /* AppDelegate.swift */,
 				B01EF3DC1B1D478D005A17B3 /* ViewController.swift */,
+				B0693EA01B2158D6005F1D93 /* SportTypeEnum.swift */,
+				B0693E941B215021005F1D93 /* SportViewController.swift */,
+				B0B2E7AB1B2670C500952C9E /* SportsOptionPicker.swift */,
+				B02D04611B266BA00019074F /* Views */,
+				B0693E9A1B215126005F1D93 /* Model */,
 				B01EF3DE1B1D478D005A17B3 /* Main.storyboard */,
 				B01EF3E11B1D478D005A17B3 /* Images.xcassets */,
 				B01EF3E31B1D478D005A17B3 /* LaunchScreen.xib */,
@@ -110,6 +133,34 @@
 				B01EF3EF1B1D478D005A17B3 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B02D04611B266BA00019074F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B02D04621B266BC30019074F /* SoccerView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		B0693E9A1B215126005F1D93 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B0693E961B215048005F1D93 /* Sport.swift */,
+				B0693E9E1B2152D5005F1D93 /* Team.swift */,
+				B0693E9B1B215140005F1D93 /* Sports */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		B0693E9B1B215140005F1D93 /* Sports */ = {
+			isa = PBXGroup;
+			children = (
+				B0693E981B21511E005F1D93 /* Baseball.swift */,
+				B0693E9C1B215150005F1D93 /* Soccer.swift */,
+				B02D045F1B2661470019074F /* Football.swift */,
+			);
+			name = Sports;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,6 +212,7 @@
 				TargetAttributes = {
 					B01EF3D41B1D478D005A17B3 = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = B66QG745MJ;
 					};
 					B01EF3E91B1D478D005A17B3 = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -212,8 +264,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B02D04601B2661470019074F /* Football.swift in Sources */,
+				B0693E991B21511E005F1D93 /* Baseball.swift in Sources */,
 				B01EF3DD1B1D478D005A17B3 /* ViewController.swift in Sources */,
+				B0693E9F1B2152D5005F1D93 /* Team.swift in Sources */,
+				B0B2E7AC1B2670C500952C9E /* SportsOptionPicker.swift in Sources */,
 				B01EF3DB1B1D478D005A17B3 /* AppDelegate.swift in Sources */,
+				B02D04631B266BC30019074F /* SoccerView.swift in Sources */,
+				B0693E971B215048005F1D93 /* Sport.swift in Sources */,
+				B0693EA11B2158D6005F1D93 /* SportTypeEnum.swift in Sources */,
+				B0693E9D1B215150005F1D93 /* Soccer.swift in Sources */,
+				B0693E951B215021005F1D93 /* SportViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,9 +403,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Sportify/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -352,9 +416,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Sportify/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -411,6 +478,7 @@
 				B01EF3F61B1D478D005A17B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B01EF3F71B1D478D005A17B3 /* Build configuration list for PBXNativeTarget "SportifyTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +487,7 @@
 				B01EF3F91B1D478D005A17B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
