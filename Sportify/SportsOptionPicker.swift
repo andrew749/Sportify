@@ -22,9 +22,9 @@ class SportsOptionPicker:UIViewController,UIPickerViewDataSource,UIPickerViewDel
         for i in 1...200{
             self.pickerData.append(i)
         }
-        self.optionsView.addSubview(timerView!)
         self.optionsView.addSubview(pointView!)
         pointView?.hidden=true
+        self.optionsView.addSubview(timerView!)
         segControl.addTarget(self, action: "toggleSelectionView", forControlEvents: UIControlEvents.ValueChanged)
     }
     
@@ -38,38 +38,30 @@ class SportsOptionPicker:UIViewController,UIPickerViewDataSource,UIPickerViewDel
         if pointView!.hidden{
             pointView?.hidden=false
             timerView?.hidden=true
+            optionsView.bringSubviewToFront(timerView!)
         }
         else{
             pointView?.hidden=true
             timerView?.hidden=false;
+            optionsView.bringSubviewToFront(pointView!)
         }
     }
     func timeOptionsView()->UIView{
-        var view=UIView()
         var picker:UIDatePicker=UIDatePicker()
         picker.datePickerMode=UIDatePickerMode.CountDownTimer
-        view.addSubview(picker)
-        view.backgroundColor=UIColor.redColor()
-        view.sizeToFit()
-        view.addConstraint(NSLayoutConstraint(item: picker, attribute: NSLayoutAttribute.Width, relatedBy: NSLayoutRelation.Equal, toItem: view, attribute: NSLayoutAttribute.Width, multiplier: 1, constant: 0))
-        view.addConstraint(NSLayoutConstraint(item: picker, attribute: NSLayoutAttribute.Left, relatedBy: NSLayoutRelation.Equal, toItem: view, attribute: NSLayoutAttribute.Left, multiplier: 1, constant: 0))
-        return view;
+        return picker;
     }
     func pointLimitOptionsView()->UIView{
-        var view=UIView()
         var picker=UIPickerView()
         picker.delegate=self
-        view.addSubview(picker)
-        view.addConstraint(NSLayoutConstraint(item: picker, attribute: NSLayoutAttribute.Width, relatedBy: NSLayoutRelation.Equal, toItem: view, attribute: NSLayoutAttribute.Width, multiplier: 1, constant: 0))
-        view.addConstraint(NSLayoutConstraint(item: picker, attribute: NSLayoutAttribute.Left, relatedBy: NSLayoutRelation.Equal, toItem: view, attribute: NSLayoutAttribute.Left, multiplier: 1, constant: 0))
-        return view
+        return picker
     }
-    func numberOfComponentsInPickerView(_ pickerView: UIPickerView) -> Int{
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int{
         return 1
     }
 
 
-    func pickerView(_ pickerView: UIPickerView,
+    func pickerView(pickerView: UIPickerView,
         numberOfRowsInComponent component: Int) -> Int{
         return self.pickerData.count
     }
