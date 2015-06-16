@@ -57,6 +57,7 @@
         <!--Sport View Controller-->
         <scene sceneID="QXB-O9-YdZ">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oHM-oT-15T" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="WgF-YO-hqB" customClass="SportViewController" customModule="Sportify" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7cb-nE-DVa"/>
@@ -87,13 +88,25 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NbB-s1-3Df">
+                                        <rect key="frame" x="0.0" y="109" width="292" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="c4A-5j-Oye"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="ITK-mZ-hgt" firstAttribute="centerY" secondItem="GGG-dy-MQm" secondAttribute="centerY" id="8TP-2P-WfD"/>
                                     <constraint firstAttribute="trailing" secondItem="GGG-dy-MQm" secondAttribute="trailing" id="8uA-1j-Rma"/>
+                                    <constraint firstItem="NbB-s1-3Df" firstAttribute="trailing" secondItem="RqW-mg-U5M" secondAttribute="trailingMargin" id="Cj0-gk-cl0"/>
+                                    <constraint firstItem="NbB-s1-3Df" firstAttribute="leading" secondItem="ITK-mZ-hgt" secondAttribute="leading" id="XWU-wW-mhV"/>
                                     <constraint firstItem="ITK-mZ-hgt" firstAttribute="top" secondItem="RqW-mg-U5M" secondAttribute="top" constant="16" id="kr3-j3-nZU"/>
                                     <constraint firstItem="ITK-mZ-hgt" firstAttribute="leading" secondItem="RqW-mg-U5M" secondAttribute="leading" id="nPO-cF-hze"/>
+                                    <constraint firstAttribute="bottom" secondItem="NbB-s1-3Df" secondAttribute="bottom" id="tQp-BE-16N"/>
                                     <constraint firstItem="ITK-mZ-hgt" firstAttribute="bottom" secondItem="RqW-mg-U5M" secondAttribute="bottomMargin" id="u1n-MK-J8N"/>
                                     <constraint firstItem="GGG-dy-MQm" firstAttribute="top" secondItem="RqW-mg-U5M" secondAttribute="top" constant="12" id="zw1-Jt-9ug"/>
                                 </constraints>
@@ -115,8 +128,12 @@
                             <constraint firstItem="RqW-mg-U5M" firstAttribute="centerX" secondItem="dOY-JN-aby" secondAttribute="centerX" id="z1k-lU-gxw"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="awayScore" destination="GGG-dy-MQm" id="0RI-4t-TSM"/>
+                        <outlet property="homeScore" destination="ITK-mZ-hgt" id="bp5-zc-01Q"/>
+                        <outlet property="timeLabel" destination="NbB-s1-3Df" id="HDd-Ui-Dfk"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oHM-oT-15T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2670" y="1515"/>
         </scene>
@@ -235,23 +252,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j62-IZ-xLa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="388" y="969"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="kOD-25-8pV">
-            <objects>
-                <viewController id="4V1-4z-4pP" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="GSW-AQ-c4u"/>
-                        <viewControllerLayoutGuide type="bottom" id="lX9-So-N51"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="7HE-Jh-IcJ">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rou-VI-0Jn" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
         </scene>
     </scenes>
 </document>
