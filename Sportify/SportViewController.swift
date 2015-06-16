@@ -11,6 +11,8 @@ import UIKit
 class SportViewController:UIViewController{
     var sport:SPORT_TYPE?;
     var sportName:String?
+    var pointLimit:Int?
+    var timeLimit:NSDate?
     override func viewDidLoad() {
         self.title=sportName
     }

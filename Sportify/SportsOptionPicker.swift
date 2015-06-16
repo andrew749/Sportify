@@ -11,17 +11,21 @@ import UIKit
 class SportsOptionPicker:UIViewController,UIPickerViewDataSource,UIPickerViewDelegate{
     var sportName:String?
     var sport:SPORT_TYPE?
-    var timerView:UIView?
-    var pointView:UIView?
+    var timerView:UIDatePicker?
+    var pointView:UIPickerView?
     var pickerData=[Int]()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title=sportName
-        timerView=timeOptionsView()
-        pointView=pointLimitOptionsView()
         for i in 1...200{
             self.pickerData.append(i)
         }
+        timerView=UIDatePicker()
+        timerView!.datePickerMode=UIDatePickerMode.CountDownTimer
+        
+        pointView=UIPickerView()
+        pointView!.delegate=self
+        
         self.optionsView.addSubview(pointView!)
         pointView?.hidden=true
         self.optionsView.addSubview(timerView!)
@@ -46,16 +50,7 @@ class SportsOptionPicker:UIViewController,UIPickerViewDataSource,UIPickerViewDel
             optionsView.bringSubviewToFront(pointView!)
         }
     }
-    func timeOptionsView()->UIView{
-        var picker:UIDatePicker=UIDatePicker()
-        picker.datePickerMode=UIDatePickerMode.CountDownTimer
-        return picker;
-    }
-    func pointLimitOptionsView()->UIView{
-        var picker=UIPickerView()
-        picker.delegate=self
-        return picker
-    }
+
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int{
         return 1
     }
@@ -74,6 +69,7 @@ class SportsOptionPicker:UIViewController,UIPickerViewDataSource,UIPickerViewDel
             if let svc=sender!.destinationViewController as? SportViewController{
                 svc.sport==self.sport
                 svc.sportName=self.sportName
+                
             }
         }
     }
