@@ -57,7 +57,6 @@
         <!--Sport View Controller-->
         <scene sceneID="QXB-O9-YdZ">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oHM-oT-15T" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="WgF-YO-hqB" customClass="SportViewController" customModule="Sportify" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7cb-nE-DVa"/>
@@ -134,6 +133,7 @@
                         <outlet property="timeLabel" destination="NbB-s1-3Df" id="HDd-Ui-Dfk"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oHM-oT-15T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2670" y="1515"/>
         </scene>

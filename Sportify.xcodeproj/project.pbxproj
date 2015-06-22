@@ -22,6 +22,7 @@
 		B0693E9F1B2152D5005F1D93 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0693E9E1B2152D5005F1D93 /* Team.swift */; };
 		B0693EA11B2158D6005F1D93 /* SportTypeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0693EA01B2158D6005F1D93 /* SportTypeEnum.swift */; };
 		B0B2E7AC1B2670C500952C9E /* SportsOptionPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B2E7AB1B2670C500952C9E /* SportsOptionPicker.swift */; };
+		B0BBD37E1B352B9100EA9016 /* SoccerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0BBD37D1B352B9100EA9016 /* SoccerView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		B0693E9E1B2152D5005F1D93 /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		B0693EA01B2158D6005F1D93 /* SportTypeEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportTypeEnum.swift; sourceTree = "<group>"; };
 		B0B2E7AB1B2670C500952C9E /* SportsOptionPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportsOptionPicker.swift; sourceTree = "<group>"; };
+		B0BBD37D1B352B9100EA9016 /* SoccerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SoccerView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				B02D04621B266BC30019074F /* SoccerView.swift */,
+				B0BBD37D1B352B9100EA9016 /* SoccerView.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B01EF3E01B1D478D005A17B3 /* Main.storyboard in Resources */,
+				B0BBD37E1B352B9100EA9016 /* SoccerView.xib in Resources */,
 				B01EF3E51B1D478D005A17B3 /* LaunchScreen.xib in Resources */,
 				B01EF3E21B1D478D005A17B3 /* Images.xcassets in Resources */,
 			);
