@@ -8,13 +8,17 @@
 
 import Foundation
 class Sport{
-    var team1:Team
-    var team2:Team
+    var homeTeam:Team
+    var awayTeam:Team
+    var amount=1
     init(){
-        self.team1=Team()
-        self.team2=Team()
+        self.homeTeam=Team()
+        self.awayTeam=Team()
     }
     func incrementScore(team:Team){
-        team.incrementScore(1)
+        team.incrementScore(amount)
+    }
+    func decrementScore(team:Team){
+        team.decrementScore(amount)
     }
 }

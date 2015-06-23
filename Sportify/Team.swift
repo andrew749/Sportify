@@ -9,11 +9,14 @@
 import Foundation
 
 class Team{
-    var score:Int!
+    var score:Int
     init(){
         self.score=0
     }
     func incrementScore(amount:Int){
-        self.score!+=amount
+        self.score+=amount
+    }
+    func decrementScore(amount:Int){
+        self.score-=amount
     }
 }

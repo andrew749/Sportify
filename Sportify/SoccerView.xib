@@ -7,21 +7,27 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SoccerView" customModule="Sportify" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7uD-mq-Hao">
-                    <rect key="frame" x="281" y="562" width="38" height="30"/>
-                    <state key="normal" title="down">
+                    <rect key="frame" x="285" y="562" width="30" height="30"/>
+                    <state key="normal" title="-">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="minusClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="eJL-RS-R7q"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oLg-Ej-7N8">
-                    <rect key="frame" x="285" y="8" width="30" height="30"/>
-                    <state key="normal" title="up">
+                    <rect key="frame" x="284" y="8" width="32" height="30"/>
+                    <state key="normal" title="Goal">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="goalClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="8cI-gt-62P"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -31,7 +37,7 @@
                 <constraint firstItem="oLg-Ej-7N8" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Yhl-8k-AiZ"/>
                 <constraint firstItem="oLg-Ej-7N8" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="topMargin" id="cCi-Uq-uAE"/>
             </constraints>
-            <point key="canvasLocation" x="271" y="343"/>
+            <point key="canvasLocation" x="205" y="358"/>
         </view>
     </objects>
 </document>

@@ -9,9 +9,24 @@
 import Foundation
 
 class Baseball:Sport{
-    var amount=1
     
     override init(){
         super.init()
+        amount=1
+    }
+    func run(isHomeTeam:Bool){
+        if isHomeTeam{
+            self.incrementScore(homeTeam)
+        }
+        else{
+            self.incrementScore(awayTeam)
+        }
+    }
+    func takeAwayRun(isHomeTeam:Bool){
+        if isHomeTeam{
+            self.decrementScore(homeTeam)
+        }else{
+            self.decrementScore(awayTeam)
+        }
     }
 }
