@@ -7,37 +7,53 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SoccerView" customModule="Sportify" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SportView" customModule="Sportify" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="217" height="251"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7uD-mq-Hao">
-                    <rect key="frame" x="285" y="562" width="30" height="30"/>
-                    <state key="normal" title="-">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1EA-0r-V9e">
+                    <rect key="frame" x="8" y="221" width="201" height="30"/>
+                    <state key="normal" title="Minus">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="minusClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="eJL-RS-R7q"/>
+                        <action selector="minusClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="4DG-fz-g8q"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oLg-Ej-7N8">
-                    <rect key="frame" x="284" y="8" width="32" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fn7-rA-czF">
+                    <rect key="frame" x="8" y="8" width="201" height="30"/>
                     <state key="normal" title="Goal">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="goalClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="8cI-gt-62P"/>
+                        <action selector="goalClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="vg2-vF-XYk"/>
                     </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="7uD-mq-Hao" firstAttribute="centerX" secondItem="oLg-Ej-7N8" secondAttribute="centerX" id="32b-FQ-Eve"/>
-                <constraint firstItem="7uD-mq-Hao" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottomMargin" id="7HB-1m-YMv"/>
-                <constraint firstItem="oLg-Ej-7N8" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Yhl-8k-AiZ"/>
-                <constraint firstItem="oLg-Ej-7N8" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="topMargin" id="cCi-Uq-uAE"/>
+                <constraint firstAttribute="bottom" secondItem="1EA-0r-V9e" secondAttribute="bottom" id="4Gy-4M-vLl"/>
+                <constraint firstItem="fn7-rA-czF" firstAttribute="leading" secondItem="1EA-0r-V9e" secondAttribute="leading" id="5we-4A-aB4"/>
+                <constraint firstItem="fn7-rA-czF" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="BEf-yy-HcT"/>
+                <constraint firstItem="1EA-0r-V9e" firstAttribute="trailing" secondItem="fn7-rA-czF" secondAttribute="trailing" id="Fi5-kp-jkm"/>
+                <constraint firstItem="fn7-rA-czF" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="topMargin" id="amG-cp-wrh"/>
+                <constraint firstItem="1EA-0r-V9e" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailingMargin" id="dDr-PQ-PlP"/>
             </constraints>
-            <point key="canvasLocation" x="205" y="358"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="161.5" y="290.5"/>
+        </view>
+        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="avQ-UW-S1p">
+            <rect key="frame" x="0.0" y="0.0" width="42" height="21"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+            <nil key="highlightedColor"/>
+        </label>
+        <view contentMode="scaleToFill" id="ZSQ-6t-VgQ">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <point key="canvasLocation" x="517" y="-226"/>
         </view>
     </objects>
 </document>

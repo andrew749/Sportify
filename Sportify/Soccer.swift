@@ -18,14 +18,14 @@ class Soccer: Sport {
             self.incrementScore(self.homeTeam)
         }
         else{
-            self.incrementScore(awayTeam)
+            self.incrementScore(self.awayTeam)
         }
     }
     func takeAwayGoal(homeTeam:Bool){
         if homeTeam{
             self.decrementScore(self.homeTeam)
         }else{
-            self.decrementScore(awayTeam)
+            self.decrementScore(self.awayTeam)
         }
     }
 }

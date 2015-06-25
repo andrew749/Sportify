@@ -9,6 +9,6 @@
 import Foundation
 
 protocol ScoreDelegate{
-    func incrementScore(value:Int)
-    func decrementScore(value:Int)
+    func incrementScore(value:Int, homeTeam:Bool)
+    func decrementScore(value:Int, homeTeam:Bool)
 }

@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-class SportsOptionPicker:UIViewController,UIPickerViewDataSource,UIPickerViewDelegate{
+class SportsOptionPicker:UIViewController,UIPickerViewDataSource,UIPickerViewDelegate,UITextFieldDelegate{
     var sportName:String?
     var sport:SPORT_TYPE?
     var timerView:TimePickerView
@@ -21,7 +21,9 @@ class SportsOptionPicker:UIViewController,UIPickerViewDataSource,UIPickerViewDel
         pointView.delegate=self
 
     }
+    @IBOutlet weak var homeTeamLabel: UITextField!
 
+    @IBOutlet weak var awayTeamLabel: UITextField!
     required init(coder aDecoder: NSCoder) {
         timerView=TimePickerView()
         pointView=UIPickerView()
@@ -38,8 +40,12 @@ class SportsOptionPicker:UIViewController,UIPickerViewDataSource,UIPickerViewDel
         pointView.hidden=true
         self.optionsView.addSubview(timerView)
         segControl.addTarget(self, action: "toggleSelectionView", forControlEvents: UIControlEvents.ValueChanged)
+        self.homeTeamLabel.delegate=self
+        self.awayTeamLabel.delegate=self
     }
-    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        return true;
+    }
     @IBOutlet weak var segControl: UISegmentedControl!
     @IBOutlet weak var optionsView: UIView!
     override func didReceiveMemoryWarning() {
@@ -75,10 +81,12 @@ class SportsOptionPicker:UIViewController,UIPickerViewDataSource,UIPickerViewDel
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if(segue.identifier=="gamestart"){
             if let svc=segue.destinationViewController as? SportViewController{
-                svc.sport==self.sport
+                svc.sport=self.sport
                 svc.sportName=self.sportName
                 svc.pointLimit=pickerData[pointView.selectedRowInComponent(0)]
                 svc.timeLimit=(timerView.hour,timerView.minute,timerView.second)
+                svc.homeTeamName=self.homeTeamLabel.text
+                svc.awayTeamName=self.awayTeamLabel.text
             }
         }
     }

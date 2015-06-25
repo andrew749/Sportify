@@ -33,7 +33,9 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
             return sports.count
             
     }
-    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 70
+    }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier=="mainviewtransition"{
             if let destination=segue.destinationViewController as? SportsOptionPicker{
