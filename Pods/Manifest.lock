@@ -1,0 +1,10 @@
+PODS:
+  - MZTimerLabel (0.5.2)
+
+DEPENDENCIES:
+  - MZTimerLabel
+
+SPEC CHECKSUMS:
+  MZTimerLabel: 1bce6b93ec9f017fffad7ea7ee2bc721b53b64ee
+
+COCOAPODS: 0.37.2

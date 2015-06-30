@@ -14,6 +14,7 @@ class Timer{
     var time:Double=0
     func setTime(time:Double){
         self.time=time
+        t=NSTimer()
     }
     func start(){
         

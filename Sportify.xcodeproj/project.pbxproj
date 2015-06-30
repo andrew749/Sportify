@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		740979E20026E1BC791A0724 /* libPods-Sportify.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 32AF69D92C138B066E841A38 /* libPods-Sportify.a */; };
 		B01EF3DB1B1D478D005A17B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01EF3DA1B1D478D005A17B3 /* AppDelegate.swift */; };
 		B01EF3DD1B1D478D005A17B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01EF3DC1B1D478D005A17B3 /* ViewController.swift */; };
 		B01EF3E01B1D478D005A17B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B01EF3DE1B1D478D005A17B3 /* Main.storyboard */; };
@@ -24,7 +25,6 @@
 		B0B2E7AC1B2670C500952C9E /* SportsOptionPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B2E7AB1B2670C500952C9E /* SportsOptionPicker.swift */; };
 		B0DA76F91B3B7D2F00B31FAA /* SportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DA76F81B3B7D2F00B31FAA /* SportView.swift */; };
 		B0DA76FB1B3B8F7C00B31FAA /* TennisView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0DA76FA1B3B8F7C00B31FAA /* TennisView.xib */; };
-		B0DA76FD1B3B90B500B31FAA /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DA76FC1B3B90B500B31FAA /* Timer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1DB84FC91D1AE70060BE7090 /* Pods-Sportify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sportify.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sportify/Pods-Sportify.debug.xcconfig"; sourceTree = "<group>"; };
+		32AF69D92C138B066E841A38 /* libPods-Sportify.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Sportify.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B01EF3D51B1D478D005A17B3 /* Sportify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sportify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B01EF3D91B1D478D005A17B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B01EF3DA1B1D478D005A17B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -50,6 +52,7 @@
 		B02D045F1B2661470019074F /* Football.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Football.swift; sourceTree = "<group>"; };
 		B0388A161B38D5E900EFE79B /* ScoreDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreDelegate.swift; sourceTree = "<group>"; };
 		B0388A191B38DBD400EFE79B /* SoccerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SoccerView.xib; sourceTree = "<group>"; };
+		B04B8D221B42285E00569C05 /* Sportify-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Sportify-Bridging-Header.h"; sourceTree = "<group>"; };
 		B0693E941B215021005F1D93 /* SportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportViewController.swift; sourceTree = "<group>"; };
 		B0693E961B215048005F1D93 /* Sport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sport.swift; sourceTree = "<group>"; };
 		B0693E981B21511E005F1D93 /* Baseball.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Baseball.swift; sourceTree = "<group>"; };
@@ -59,7 +62,7 @@
 		B0B2E7AB1B2670C500952C9E /* SportsOptionPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportsOptionPicker.swift; sourceTree = "<group>"; };
 		B0DA76F81B3B7D2F00B31FAA /* SportView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportView.swift; sourceTree = "<group>"; };
 		B0DA76FA1B3B8F7C00B31FAA /* TennisView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TennisView.xib; sourceTree = "<group>"; };
-		B0DA76FC1B3B90B500B31FAA /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
+		CD7EE00CCD4F6E1CE1981A3D /* Pods-Sportify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sportify.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sportify/Pods-Sportify.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				740979E20026E1BC791A0724 /* libPods-Sportify.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,12 +84,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F55F12094303618E3A2A5E3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				32AF69D92C138B066E841A38 /* libPods-Sportify.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		24E0DB82B7FF1D3B5B4E8D5A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1DB84FC91D1AE70060BE7090 /* Pods-Sportify.debug.xcconfig */,
+				CD7EE00CCD4F6E1CE1981A3D /* Pods-Sportify.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B01EF3CC1B1D478D005A17B3 = {
 			isa = PBXGroup;
 			children = (
 				B01EF3D71B1D478D005A17B3 /* Sportify */,
 				B01EF3ED1B1D478D005A17B3 /* SportifyTests */,
 				B01EF3D61B1D478D005A17B3 /* Products */,
+				24E0DB82B7FF1D3B5B4E8D5A /* Pods */,
+				0F55F12094303618E3A2A5E3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,7 +130,7 @@
 				B0B2E7AB1B2670C500952C9E /* SportsOptionPicker.swift */,
 				B0693E941B215021005F1D93 /* SportViewController.swift */,
 				B0388A161B38D5E900EFE79B /* ScoreDelegate.swift */,
-				B0DA76FC1B3B90B500B31FAA /* Timer.swift */,
+				B04B8D221B42285E00569C05 /* Sportify-Bridging-Header.h */,
 				B02D04611B266BA00019074F /* Views */,
 				B0693E9A1B215126005F1D93 /* Model */,
 				B01EF3DE1B1D478D005A17B3 /* Main.storyboard */,
@@ -187,9 +210,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B01EF3F41B1D478D005A17B3 /* Build configuration list for PBXNativeTarget "Sportify" */;
 			buildPhases = (
+				2C0CA80D69D515CBF2F9EA8C /* Check Pods Manifest.lock */,
 				B01EF3D11B1D478D005A17B3 /* Sources */,
 				B01EF3D21B1D478D005A17B3 /* Frameworks */,
 				B01EF3D31B1D478D005A17B3 /* Resources */,
+				B4B85D2DA69BAAABE13EA4A7 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -277,6 +302,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2C0CA80D69D515CBF2F9EA8C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B4B85D2DA69BAAABE13EA4A7 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sportify/Pods-Sportify-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B01EF3D11B1D478D005A17B3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -286,7 +344,6 @@
 				B0693E991B21511E005F1D93 /* Baseball.swift in Sources */,
 				B01EF3DD1B1D478D005A17B3 /* ViewController.swift in Sources */,
 				B0693E9F1B2152D5005F1D93 /* Team.swift in Sources */,
-				B0DA76FD1B3B90B500B31FAA /* Timer.swift in Sources */,
 				B0B2E7AC1B2670C500952C9E /* SportsOptionPicker.swift in Sources */,
 				B01EF3DB1B1D478D005A17B3 /* AppDelegate.swift in Sources */,
 				B0693E971B215048005F1D93 /* Sport.swift in Sources */,
@@ -413,6 +470,7 @@
 		};
 		B01EF3F51B1D478D005A17B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1DB84FC91D1AE70060BE7090 /* Pods-Sportify.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -421,11 +479,13 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Sportify/Sportify-Bridging-Header.h";
 			};
 			name = Debug;
 		};
 		B01EF3F61B1D478D005A17B3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD7EE00CCD4F6E1CE1981A3D /* Pods-Sportify.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -434,6 +494,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Sportify/Sportify-Bridging-Header.h";
 			};
 			name = Release;
 		};
