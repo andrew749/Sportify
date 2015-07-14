@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
-    var sports:[String]=["Baseball","Soccer","Football","Basketball","Tennis","Hockey"];
+    var sports:[String:String]=["Baseball":"⚾️","Soccer":"⚽️","Football":"🏈","Basketball":"🏀","Tennis":"🎾"];
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate=self
@@ -25,7 +25,15 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     func tableView(tableView: UITableView,
         cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
             var cell:UITableViewCell=tableView.dequeueReusableCellWithIdentifier("sportcell") as! UITableViewCell;
-            cell.textLabel?.text=sports[indexPath.row];
+            let row=indexPath.row
+            let keys=[String](sports.keys)
+            let key=keys[row]
+            var value:String=sports[key]!
+            cell.textLabel?.text=key;
+            let label=UILabel()
+            label.text=value
+            label.sizeToFit()
+            cell.accessoryView=label
             return cell
     }
     func tableView(tableView: UITableView,
@@ -34,7 +42,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
             
     }
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 70
+        return 100
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier=="mainviewtransition"{
@@ -51,13 +59,11 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
                         destination.sport=SPORT_TYPE.BASKETBALL
                     case 4:
                         destination.sport=SPORT_TYPE.TENNIS
-                    case 5:
-                        destination.sport=SPORT_TYPE.HOCKEY
                     default:
                         destination.sport=SPORT_TYPE.GENERIC;
                     }
-                    destination.sportName=sports[index]
-
+                    
+                    destination.sportName=([String](sports.keys))[index]
                 }
             }
         }
