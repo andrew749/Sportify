@@ -24,7 +24,6 @@
 		B0693EA11B2158D6005F1D93 /* SportTypeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0693EA01B2158D6005F1D93 /* SportTypeEnum.swift */; };
 		B0B2E7AC1B2670C500952C9E /* SportsOptionPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B2E7AB1B2670C500952C9E /* SportsOptionPicker.swift */; };
 		B0DA76F91B3B7D2F00B31FAA /* SportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DA76F81B3B7D2F00B31FAA /* SportView.swift */; };
-		B0DA76FB1B3B8F7C00B31FAA /* TennisView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0DA76FA1B3B8F7C00B31FAA /* TennisView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,7 +60,6 @@
 		B0693EA01B2158D6005F1D93 /* SportTypeEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportTypeEnum.swift; sourceTree = "<group>"; };
 		B0B2E7AB1B2670C500952C9E /* SportsOptionPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportsOptionPicker.swift; sourceTree = "<group>"; };
 		B0DA76F81B3B7D2F00B31FAA /* SportView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportView.swift; sourceTree = "<group>"; };
-		B0DA76FA1B3B8F7C00B31FAA /* TennisView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TennisView.xib; sourceTree = "<group>"; };
 		CD7EE00CCD4F6E1CE1981A3D /* Pods-Sportify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sportify.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sportify/Pods-Sportify.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -170,7 +168,6 @@
 			children = (
 				B0DA76F81B3B7D2F00B31FAA /* SportView.swift */,
 				B0388A191B38DBD400EFE79B /* SoccerView.xib */,
-				B0DA76FA1B3B8F7C00B31FAA /* TennisView.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -289,7 +286,6 @@
 				B01EF3E01B1D478D005A17B3 /* Main.storyboard in Resources */,
 				B0388A1A1B38DBD400EFE79B /* SoccerView.xib in Resources */,
 				B01EF3E21B1D478D005A17B3 /* Images.xcassets in Resources */,
-				B0DA76FB1B3B8F7C00B31FAA /* TennisView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
