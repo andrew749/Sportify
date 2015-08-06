@@ -67,15 +67,15 @@ class SportViewController:UIViewController,ScoreDelegate{
     func createView(){
         switch(sport!){
         case SPORT_TYPE.SOCCER:
-            homeCounterView=NSBundle.mainBundle().loadNibNamed("SoccerView", owner: self, options: nil)[0] as? SportView
-            awayCounterView=NSBundle.mainBundle().loadNibNamed("SoccerView", owner: self, options: nil)[0] as? SportView
+            homeCounterView=NSBundle.mainBundle().loadNibNamed("SportView", owner: self, options: nil)[0] as? SportView
+            awayCounterView=NSBundle.mainBundle().loadNibNamed("SportView", owner: self, options: nil)[0] as? SportView
             homeCounterView!.isHomeView=true
             awayCounterView!.isHomeView=false
             homeCounterView?.delegate=self
             awayCounterView?.delegate=self
         default:
-            homeCounterView=NSBundle.mainBundle().loadNibNamed("SoccerView", owner: self, options: nil)[0] as? SportView
-            awayCounterView=NSBundle.mainBundle().loadNibNamed("SoccerView", owner: self, options: nil)[0] as? SportView
+            homeCounterView=NSBundle.mainBundle().loadNibNamed("SportView", owner: self, options: nil)[0] as? SportView
+            awayCounterView=NSBundle.mainBundle().loadNibNamed("SportView", owner: self, options: nil)[0] as? SportView
             homeCounterView!.isHomeView=true
             awayCounterView!.isHomeView=false
             homeCounterView?.delegate=self

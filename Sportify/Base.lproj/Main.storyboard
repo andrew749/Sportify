@@ -54,7 +54,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1220" y="960"/>
+            <point key="canvasLocation" x="1212" y="969"/>
         </scene>
         <!--Sport View Controller-->
         <scene sceneID="QXB-O9-YdZ">
@@ -239,7 +239,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oHM-oT-15T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2795" y="960"/>
+            <point key="canvasLocation" x="2795" y="969"/>
         </scene>
         <!--Sport-->
         <scene sceneID="ion-84-DYu">
@@ -339,7 +339,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7vx-TK-t5B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1993" y="960"/>
+            <point key="canvasLocation" x="1995" y="969"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6AU-I3-5bL">
@@ -349,6 +349,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="cFK-nj-bcA">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.571689059032362" blue="0.57625230361672353" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
