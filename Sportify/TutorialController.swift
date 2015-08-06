@@ -42,6 +42,14 @@ class TutorialController:UIViewController, UIPageViewControllerDelegate, UIPageV
         for x in xibNames{
             viewControllers.append(createController(x))
         }
+        var button = UIButton()
+        button.setTitle("Start", forState: UIControlState.Normal)
+        button.addTarget(self, action: "pushStoryBoard", forControlEvents: UIControlEvents.TouchUpInside)
+        button.sizeToFit()
+        viewControllers.last?.view.addSubview(button)
+        viewControllers.last?.view.addConstraint(NSLayoutConstraint(item: viewControllers.last!.view, attribute: NSLayoutAttribute.Width, relatedBy: NSLayoutRelation.Equal, toItem: button, attribute: NSLayoutAttribute.Width, multiplier: 1, constant: 0))
+        viewControllers.last?.view.addConstraint(NSLayoutConstraint(item: viewControllers.last!.view, attribute: NSLayoutAttribute.CenterX, relatedBy: NSLayoutRelation.Equal, toItem: button, attribute: NSLayoutAttribute.CenterX, multiplier: 1, constant: 0))
+        viewControllers.last?.view.addConstraint(NSLayoutConstraint(item: viewControllers.last!.view, attribute: NSLayoutAttribute.Bottom, relatedBy: NSLayoutRelation.Equal, toItem: button, attribute: NSLayoutAttribute.Bottom, multiplier: 1, constant: 0))
         return viewControllers
     }
     
@@ -49,6 +57,12 @@ class TutorialController:UIViewController, UIPageViewControllerDelegate, UIPageV
         var viewController = UIViewController()
         viewController.view = NSBundle.mainBundle().loadNibNamed(xibName, owner: self, options: nil)[0] as! UIView
         return viewController
+    }
+    
+    func pushStoryBoard(){
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewControllerWithIdentifier("mainsequence") as! UIViewController
+        self.presentViewController(vc, animated: true, completion: nil)
     }
     
 //    MARK: UIPageViewControllerDataSource Delegate methods
@@ -66,14 +80,8 @@ class TutorialController:UIViewController, UIPageViewControllerDelegate, UIPageV
         if index < tutorialControllers!.count - 1{
             return tutorialControllers![index + 1]
         }
-        if index == tutorialControllers?.count{
-            
-        }
+
         return nil
-//        else{
-//            UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
-//            return nil
-//        }
     }
     
     func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {
