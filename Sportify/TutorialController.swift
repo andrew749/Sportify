@@ -46,6 +46,7 @@ class TutorialController:UIViewController, UIPageViewControllerDelegate, UIPageV
         button.setTitle("Start", forState: UIControlState.Normal)
         button.addTarget(self, action: "pushStoryBoard", forControlEvents: UIControlEvents.TouchUpInside)
         button.sizeToFit()
+        button.setTranslatesAutoresizingMaskIntoConstraints(false)
         viewControllers.last?.view.addSubview(button)
         viewControllers.last?.view.addConstraint(NSLayoutConstraint(item: viewControllers.last!.view, attribute: NSLayoutAttribute.Width, relatedBy: NSLayoutRelation.Equal, toItem: button, attribute: NSLayoutAttribute.Width, multiplier: 1, constant: 0))
         viewControllers.last?.view.addConstraint(NSLayoutConstraint(item: viewControllers.last!.view, attribute: NSLayoutAttribute.CenterX, relatedBy: NSLayoutRelation.Equal, toItem: button, attribute: NSLayoutAttribute.CenterX, multiplier: 1, constant: 0))
