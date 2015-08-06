@@ -13,7 +13,6 @@ class TutorialController:UIViewController, UIPageViewControllerDelegate, UIPageV
     let xibNames = ["MainViewController","TutorialViewController2", "TutorialViewController3"]
     var tutorialControllers: [UIViewController]?
     var index = 0
-   
     init(){
         super.init(nibName: nil, bundle: nil)
         tutorialPageController = UIPageViewController(transitionStyle: UIPageViewControllerTransitionStyle.Scroll, navigationOrientation: UIPageViewControllerNavigationOrientation.Horizontal, options: nil)
@@ -30,7 +29,7 @@ class TutorialController:UIViewController, UIPageViewControllerDelegate, UIPageV
         
         
         tutorialPageController?.view.backgroundColor = UIColor.blackColor()
-        tutorialPageController!.setViewControllers([tutorialControllers![index]], direction: UIPageViewControllerNavigationDirection.Forward, animated: true, completion: nil)
+        tutorialPageController!.setViewControllers([tutorialControllers![0]], direction: UIPageViewControllerNavigationDirection.Forward, animated: true, completion: nil)
         tutorialPageController?.view.frame = self.view.frame
         self.view.addSubview(tutorialPageController!.view!)
     }
@@ -54,14 +53,18 @@ class TutorialController:UIViewController, UIPageViewControllerDelegate, UIPageV
     
 //    MARK: UIPageViewControllerDataSource Delegate methods
     func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
+        let index:Int = find(tutorialControllers!, viewController)!
+        self.index = index
         if index > 0{
-            return tutorialControllers![--index]
+            return tutorialControllers![index - 1]
         }
         return nil
     }
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
+        let index:Int = find(tutorialControllers!, viewController)!
+        self.index = index
         if index < tutorialControllers!.count - 1{
-            return tutorialControllers![++index]
+            return tutorialControllers![index + 1]
         }
         if index == tutorialControllers?.count{
             
