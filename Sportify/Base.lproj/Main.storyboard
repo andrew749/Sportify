@@ -138,6 +138,31 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="newCell" id="KM2-WP-SYs">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KM2-WP-SYs" id="Y7w-mo-KYU">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Game" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FBB-y2-4Yg">
+                                                    <rect key="frame" x="257" y="11" width="86" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="86" id="GqP-1t-tGP"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="FBB-y2-4Yg" firstAttribute="top" secondItem="Y7w-mo-KYU" secondAttribute="topMargin" constant="3" id="r8h-u8-EeB"/>
+                                                <constraint firstItem="FBB-y2-4Yg" firstAttribute="centerX" secondItem="Y7w-mo-KYU" secondAttribute="centerX" id="t1a-9M-pfI"/>
+                                                <constraint firstItem="FBB-y2-4Yg" firstAttribute="centerY" secondItem="Y7w-mo-KYU" secondAttribute="centerY" id="weW-Ay-NMv"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="WgF-YO-hqB" kind="show" identifier="Game View" id="9a7-Lk-1Py"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
@@ -193,7 +218,7 @@
                                 <rect key="frame" x="0.0" y="64" width="600" height="130"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ITK-mZ-hgt">
-                                        <rect key="frame" x="8" y="12" width="71" height="106"/>
+                                        <rect key="frame" x="8" y="12" width="58" height="106"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="76"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -225,8 +250,8 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ph-Jn-Iqs">
-                                        <rect key="frame" x="22" y="0.0" width="42" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ph-Jn-Iqs">
+                                        <rect key="frame" x="22" y="0.0" width="29" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="56R-2e-ENm"/>
                                         </constraints>
@@ -264,7 +289,7 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Prr-ly-QKz">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Prr-ly-QKz">
                                 <rect key="frame" x="16" y="570" width="79" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="79" id="amg-PT-BGy"/>
@@ -292,7 +317,7 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fm1-Sj-ot1">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fm1-Sj-ot1">
                                 <rect key="frame" x="523" y="570" width="61" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="258" id="6VA-te-9o6"/>
@@ -349,12 +374,11 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="awayCounter" destination="c5Q-IS-eFL" id="Ak6-y8-9Ww"/>
-                        <outlet property="awayScore" destination="ITK-mZ-hgt" id="QZx-SB-ROK"/>
-                        <outlet property="awayTeamLabel" destination="4ph-Jn-Iqs" id="2Fd-z9-UVd"/>
-                        <outlet property="homeCounter" destination="6hm-Nc-Zf6" id="krA-nE-iT8"/>
-                        <outlet property="homeScore" destination="GGG-dy-MQm" id="qFQ-rv-ocN"/>
-                        <outlet property="homeTeamLabel" destination="jrn-1h-Ytk" id="nmp-WU-kxW"/>
+                        <outlet property="opponentCounter" destination="6hm-Nc-Zf6" id="uZn-Hn-VmI"/>
+                        <outlet property="opponentName" destination="jrn-1h-Ytk" id="Jrz-co-lL1"/>
+                        <outlet property="opponentScore" destination="GGG-dy-MQm" id="fQa-uf-wUj"/>
+                        <outlet property="playerCounter" destination="c5Q-IS-eFL" id="r1u-xN-ibR"/>
+                        <outlet property="playerScore" destination="ITK-mZ-hgt" id="4VI-65-AVV"/>
                         <outlet property="timeLabel" destination="NbB-s1-3Df" id="HDd-Ui-Dfk"/>
                     </connections>
                 </viewController>

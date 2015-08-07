@@ -30,13 +30,10 @@ class TeamViewController:UIViewController, UITableViewDataSource, UITableViewDel
             cell = tableView.dequeueReusableCellWithIdentifier("chartCell")
             let view = cell?.viewWithTag(1)
             view?.backgroundColor = UIColor.redColor()
+        }else if row == games.count + 2{
+            cell = tableView.dequeueReusableCellWithIdentifier("newCell")
         }else {
             cell = tableView.dequeueReusableCellWithIdentifier("defaultCell")
-            if row == games.count + 2{
-                cell?.textLabel!?.text = "New Game"
-            }else{
-                
-            }
         }
         return cell as! UITableViewCell
     }
@@ -44,6 +41,8 @@ class TeamViewController:UIViewController, UITableViewDataSource, UITableViewDel
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return games.count + 3
     }
+    
+    
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         switch indexPath.row{
         case 0:
@@ -54,4 +53,15 @@ class TeamViewController:UIViewController, UITableViewDataSource, UITableViewDel
             return 50
         }
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "Game View"{
+            if let destination = segue.destinationViewController as? SportViewController{
+                destination.opponent = opponent
+                
+            }
+        }
+    }
+ 
+    
 }

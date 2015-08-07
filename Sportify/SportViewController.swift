@@ -7,24 +7,22 @@
 //
 
 import UIKit
-
+import CoreData
 class SportViewController: UIViewController, ScoreDelegate{
 //    Interface builder elements
-    @IBOutlet weak var awayScore: UILabel!
-    @IBOutlet weak var homeScore: UILabel!
-    @IBOutlet weak var awayTeamLabel: UILabel!
-    @IBOutlet weak var homeTeamLabel: UILabel!
-    @IBOutlet weak var awayCounter: UIView!
-    @IBOutlet weak var homeCounter: UIView!
+    @IBOutlet weak var playerScore: UILabel!
+    @IBOutlet weak var opponentScore: UILabel!
+    @IBOutlet weak var opponentName: UILabel!
+    @IBOutlet weak var playerCounter: UIView!
+    @IBOutlet weak var opponentCounter: UIView!
     
     var awayCounterView:SportView?,homeCounterView:SportView?;
-    var awayTeamName:String?
-    var homeTeamName:String?
-    var sportName:String?
+
+    var opponent:NSManagedObject?
+    
     var sportCounter:UIView?
+    
     @IBOutlet weak var timeLabel: UILabel!
-    var pointLimit:Int?
-    var timeLimit:(Int,Int,Int)=(0,0,0)
     var game:Game = Game()
     var timerLabel:MZTimerLabel?
     @IBAction func startTimer(sender: AnyObject) {
@@ -40,8 +38,8 @@ class SportViewController: UIViewController, ScoreDelegate{
         updateScore()
     }
     func updateScore(){
-        homeScore.text="\(game.homeTeam.score)"
-        awayScore.text="\(game.awayTeam.score)"
+        opponentScore.text="\(game.homeTeam.score)"
+        playerScore.text="\(game.awayTeam.score)"
     }
     func decrementScore(value:Int, homeTeam:Bool){
         if homeTeam{
@@ -64,25 +62,21 @@ class SportViewController: UIViewController, ScoreDelegate{
         homeCounterView?.delegate=self
         awayCounterView?.delegate=self
   
-        homeCounter.addSubview(homeCounterView!)
-        awayCounter.addSubview(awayCounterView!)
+        opponentCounter.addSubview(homeCounterView!)
+        playerCounter.addSubview(awayCounterView!)
         
-        homeCounterView?.frame=homeCounter.bounds
-        awayCounterView?.frame=awayCounter.bounds
+        homeCounterView?.frame=opponentCounter.bounds
+        awayCounterView?.frame=playerCounter.bounds
     }
 
     override func viewDidLoad() {
         timerLabel=MZTimerLabel(label: self.timeLabel, andTimerType: MZTimerLabelTypeTimer)
         timerLabel!.timeFormat="HH:mm:ss"
-        self.title=sportName
-        let d=Double(timeLimit.0*3600)+Double(timeLimit.1*60)+Double(timeLimit.0)
-        timerLabel!.setStopWatchTime(d)
-        if let s = self.homeTeamName{
-            self.homeTeamLabel.text=s
+        timerLabel!.setStopWatchTime(100)
+        if let s = self.opponent?.valueForKey("name") as? String{
+            self.opponentName.text=s
         }
-        if let s = self.awayTeamName{
-            self.awayTeamLabel.text=s
-        }
+       
         self.createView()
     }
     override func didReceiveMemoryWarning() {
