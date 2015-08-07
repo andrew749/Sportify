@@ -18,7 +18,6 @@ class SportViewController:UIViewController,ScoreDelegate{
     var awayCounterView:SportView?,homeCounterView:SportView?;
     var awayTeamName:String?
     var homeTeamName:String?
-    var sport:SPORT_TYPE?;
     var sportName:String?
     var sportCounter:UIView?
     @IBOutlet weak var timeLabel: UILabel!
@@ -65,23 +64,14 @@ class SportViewController:UIViewController,ScoreDelegate{
         updateScore()
     }
     func createView(){
-        switch(sport!){
-        case SPORT_TYPE.SOCCER:
-            homeCounterView=NSBundle.mainBundle().loadNibNamed("SportView", owner: self, options: nil)[0] as? SportView
-            awayCounterView=NSBundle.mainBundle().loadNibNamed("SportView", owner: self, options: nil)[0] as? SportView
-            homeCounterView!.isHomeView=true
-            awayCounterView!.isHomeView=false
-            homeCounterView?.delegate=self
-            awayCounterView?.delegate=self
-        default:
-            homeCounterView=NSBundle.mainBundle().loadNibNamed("SportView", owner: self, options: nil)[0] as? SportView
-            awayCounterView=NSBundle.mainBundle().loadNibNamed("SportView", owner: self, options: nil)[0] as? SportView
-            homeCounterView!.isHomeView=true
-            awayCounterView!.isHomeView=false
-            homeCounterView?.delegate=self
-            awayCounterView?.delegate=self
-        }
-        
+
+        homeCounterView=NSBundle.mainBundle().loadNibNamed("SportView", owner: self, options: nil)[0] as? SportView
+        awayCounterView=NSBundle.mainBundle().loadNibNamed("SportView", owner: self, options: nil)[0] as? SportView
+        homeCounterView!.isHomeView=true
+        awayCounterView!.isHomeView=false
+        homeCounterView?.delegate=self
+        awayCounterView?.delegate=self
+  
         homeCounter.addSubview(homeCounterView!)
         awayCounter.addSubview(awayCounterView!)
         

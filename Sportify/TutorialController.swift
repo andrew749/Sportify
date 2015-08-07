@@ -43,7 +43,7 @@ class TutorialController:UIViewController, UIPageViewControllerDelegate, UIPageV
             viewControllers.append(createController(x))
         }
         var button = UIButton()
-        button.setTitle("Start", forState: UIControlState.Normal)
+        button.setTitle("I'm Ready!", forState: UIControlState.Normal)
         button.addTarget(self, action: "pushStoryBoard", forControlEvents: UIControlEvents.TouchUpInside)
         button.sizeToFit()
         button.setTranslatesAutoresizingMaskIntoConstraints(false)
