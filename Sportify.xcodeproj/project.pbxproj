@@ -22,8 +22,7 @@
 		B051F2E71B7429CF0049F1FC /* Opponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B051F2E61B7429CF0049F1FC /* Opponent.swift */; };
 		B051F2E91B742D480049F1FC /* TeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B051F2E81B742D480049F1FC /* TeamViewController.swift */; };
 		B0693E951B215021005F1D93 /* SportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0693E941B215021005F1D93 /* SportViewController.swift */; };
-		B0693E971B215048005F1D93 /* Sport.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0693E961B215048005F1D93 /* Sport.swift */; };
-		B0693E9D1B215150005F1D93 /* Soccer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0693E9C1B215150005F1D93 /* Soccer.swift */; };
+		B0693E971B215048005F1D93 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0693E961B215048005F1D93 /* Game.swift */; };
 		B0693E9F1B2152D5005F1D93 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0693E9E1B2152D5005F1D93 /* Team.swift */; };
 		B0B2E7AC1B2670C500952C9E /* SportsOptionPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B2E7AB1B2670C500952C9E /* SportsOptionPicker.swift */; };
 		B0DA76F91B3B7D2F00B31FAA /* SportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DA76F81B3B7D2F00B31FAA /* SportView.swift */; };
@@ -61,8 +60,7 @@
 		B051F2E61B7429CF0049F1FC /* Opponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Opponent.swift; sourceTree = "<group>"; };
 		B051F2E81B742D480049F1FC /* TeamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamViewController.swift; sourceTree = "<group>"; };
 		B0693E941B215021005F1D93 /* SportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportViewController.swift; sourceTree = "<group>"; };
-		B0693E961B215048005F1D93 /* Sport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sport.swift; sourceTree = "<group>"; };
-		B0693E9C1B215150005F1D93 /* Soccer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Soccer.swift; sourceTree = "<group>"; };
+		B0693E961B215048005F1D93 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		B0693E9E1B2152D5005F1D93 /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		B0B2E7AB1B2670C500952C9E /* SportsOptionPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportsOptionPicker.swift; sourceTree = "<group>"; };
 		B0DA76F81B3B7D2F00B31FAA /* SportView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportView.swift; sourceTree = "<group>"; };
@@ -187,15 +185,6 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
-		B0388A181B38D63A00EFE79B /* Parent Classes */ = {
-			isa = PBXGroup;
-			children = (
-				B0693E9E1B2152D5005F1D93 /* Team.swift */,
-				B0693E961B215048005F1D93 /* Sport.swift */,
-			);
-			name = "Parent Classes";
-			sourceTree = "<group>";
-		};
 		B051F2EA1B742E6B0049F1FC /* TutorialXibs */ = {
 			isa = PBXGroup;
 			children = (
@@ -211,18 +200,10 @@
 			children = (
 				B0388A161B38D5E900EFE79B /* ScoreDelegate.swift */,
 				B051F2E61B7429CF0049F1FC /* Opponent.swift */,
-				B0388A181B38D63A00EFE79B /* Parent Classes */,
-				B0693E9B1B215140005F1D93 /* Sports */,
+				B0693E9E1B2152D5005F1D93 /* Team.swift */,
+				B0693E961B215048005F1D93 /* Game.swift */,
 			);
 			name = Model;
-			sourceTree = "<group>";
-		};
-		B0693E9B1B215140005F1D93 /* Sports */ = {
-			isa = PBXGroup;
-			children = (
-				B0693E9C1B215150005F1D93 /* Soccer.swift */,
-			);
-			name = Sports;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -368,11 +349,10 @@
 				B0693E9F1B2152D5005F1D93 /* Team.swift in Sources */,
 				B0B2E7AC1B2670C500952C9E /* SportsOptionPicker.swift in Sources */,
 				B01EF3DB1B1D478D005A17B3 /* AppDelegate.swift in Sources */,
-				B0693E971B215048005F1D93 /* Sport.swift in Sources */,
+				B0693E971B215048005F1D93 /* Game.swift in Sources */,
 				B0DA76F91B3B7D2F00B31FAA /* SportView.swift in Sources */,
 				B0388A171B38D5E900EFE79B /* ScoreDelegate.swift in Sources */,
 				B051F2E71B7429CF0049F1FC /* Opponent.swift in Sources */,
-				B0693E9D1B215150005F1D93 /* Soccer.swift in Sources */,
 				B0693E951B215021005F1D93 /* SportViewController.swift in Sources */,
 				B02802E11B72DCC80061F350 /* TutorialController.swift in Sources */,
 				B051F2E91B742D480049F1FC /* TeamViewController.swift in Sources */,

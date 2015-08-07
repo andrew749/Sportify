@@ -5,6 +5,7 @@
 //  Created by Andrew Codispoti on 2015-08-06.
 //  Copyright (c) 2015 Andrew Codispoti. All rights reserved.
 //
+//  A class to save and load data which also represents a team.
 
 import Foundation
 

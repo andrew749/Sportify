@@ -3,6 +3,7 @@
 
 target 'Sportify' do
 pod 'MZTimerLabel'
+pod 'JBChartView'
 end
 
 target 'SportifyTests' do

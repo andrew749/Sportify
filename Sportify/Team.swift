@@ -5,6 +5,8 @@
 //  Created by Andrew Codispoti on 2015-06-04.
 //  Copyright (c) 2015 Andrew Codispoti. All rights reserved.
 //
+//  A class to represent one of the teams playing a game.
+//
 
 import Foundation
 
