@@ -22,11 +22,38 @@ class SportViewController: UIViewController, ScoreDelegate{
     
     var sportCounter:UIView?
     
+    var gameDelegate:GameDelegate?
+    
     @IBOutlet weak var timeLabel: UILabel!
+    
+    
     var game:Game = Game()
     var timerLabel:MZTimerLabel?
+    
+    @IBOutlet weak var startButton: UIButton!
     @IBAction func startTimer(sender: AnyObject) {
-        timerLabel?.start()
+        toggleTimer()
+    }
+    
+    @IBAction func resetClick(sender: AnyObject) {
+        timerLabel?.reset()
+        toggleTimer()
+    }
+    
+    @IBAction func doneClick(sender: AnyObject) {
+        let ps:Int = playerScore.text!.toInt()!
+        let os:Int = opponentScore.text!.toInt()!
+        gameDelegate?.didFinishGame(ps, opponentScore: os)
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    func toggleTimer(){
+        if timerLabel?.counting == true {
+            timerLabel?.pause()
+            startButton.setTitle("Resume", forState: UIControlState.Normal)
+        }else{
+            timerLabel?.start()
+            startButton.setTitle("Pause", forState: UIControlState.Normal)
+        }
     }
     
     func incrementScore(value:Int, homeTeam:Bool){
@@ -70,17 +97,14 @@ class SportViewController: UIViewController, ScoreDelegate{
     }
 
     override func viewDidLoad() {
-        timerLabel=MZTimerLabel(label: self.timeLabel, andTimerType: MZTimerLabelTypeTimer)
+        timerLabel=MZTimerLabel(label: self.timeLabel, andTimerType: MZTimerLabelTypeStopWatch
+        )
         timerLabel!.timeFormat="HH:mm:ss"
-        timerLabel!.setStopWatchTime(100)
         if let s = self.opponent?.valueForKey("name") as? String{
             self.opponentName.text=s
         }
        
         self.createView()
     }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+  
 }

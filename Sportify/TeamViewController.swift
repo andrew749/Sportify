@@ -8,7 +8,7 @@
 
 import Foundation
 import CoreData
-class TeamViewController:UIViewController, UITableViewDataSource, UITableViewDelegate{
+class TeamViewController:UIViewController, UITableViewDataSource, UITableViewDelegate, GameDelegate{
     var opponent :NSManagedObject?
     
     @IBOutlet weak var tableView: UITableView!
@@ -58,10 +58,14 @@ class TeamViewController:UIViewController, UITableViewDataSource, UITableViewDel
         if segue.identifier == "Game View"{
             if let destination = segue.destinationViewController as? SportViewController{
                 destination.opponent = opponent
-                
+                destination.gameDelegate = self
             }
         }
     }
  
+    func didFinishGame(playerScore:Int, opponentScore:Int){
+        //TODO save score and update table view
+        print("didreceive data")
+    }
     
 }

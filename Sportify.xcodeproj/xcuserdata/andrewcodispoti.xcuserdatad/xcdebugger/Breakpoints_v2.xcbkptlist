@@ -52,11 +52,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sportify/SportViewController.swift"
-            timestampString = "460606015.434853"
+            timestampString = "460607834.429226"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
             landmarkName = "updateScore()"
             landmarkType = "5">
          </BreakpointContent>

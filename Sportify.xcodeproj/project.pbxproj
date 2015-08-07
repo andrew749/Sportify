@@ -23,6 +23,7 @@
 		B051F2EC1B7434750049F1FC /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B051F2EB1B7434750049F1FC /* CoreData.framework */; };
 		B051F2EE1B7434BE0049F1FC /* DataSendingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B051F2ED1B7434BE0049F1FC /* DataSendingDelegate.swift */; };
 		B051F2F11B7435DE0049F1FC /* SportifyData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B051F2EF1B7435DE0049F1FC /* SportifyData.xcdatamodeld */; };
+		B051F2F31B744F0C0049F1FC /* GameDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B051F2F21B744F0C0049F1FC /* GameDelegate.swift */; };
 		B0693E951B215021005F1D93 /* SportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0693E941B215021005F1D93 /* SportViewController.swift */; };
 		B0693E971B215048005F1D93 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0693E961B215048005F1D93 /* Game.swift */; };
 		B0693E9F1B2152D5005F1D93 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0693E9E1B2152D5005F1D93 /* Team.swift */; };
@@ -63,6 +64,7 @@
 		B051F2EB1B7434750049F1FC /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		B051F2ED1B7434BE0049F1FC /* DataSendingDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSendingDelegate.swift; sourceTree = "<group>"; };
 		B051F2F01B7435DE0049F1FC /* SportifyData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SportifyData.xcdatamodel; sourceTree = "<group>"; };
+		B051F2F21B744F0C0049F1FC /* GameDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameDelegate.swift; sourceTree = "<group>"; };
 		B0693E941B215021005F1D93 /* SportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportViewController.swift; sourceTree = "<group>"; };
 		B0693E961B215048005F1D93 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		B0693E9E1B2152D5005F1D93 /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 			children = (
 				B0388A161B38D5E900EFE79B /* ScoreDelegate.swift */,
 				B051F2ED1B7434BE0049F1FC /* DataSendingDelegate.swift */,
+				B051F2F21B744F0C0049F1FC /* GameDelegate.swift */,
 				B0693E9E1B2152D5005F1D93 /* Team.swift */,
 				B0693E961B215048005F1D93 /* Game.swift */,
 			);
@@ -364,6 +367,7 @@
 				B02802E11B72DCC80061F350 /* TutorialController.swift in Sources */,
 				B051F2E91B742D480049F1FC /* TeamViewController.swift in Sources */,
 				B051F2F11B7435DE0049F1FC /* SportifyData.xcdatamodeld in Sources */,
+				B051F2F31B744F0C0049F1FC /* GameDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
