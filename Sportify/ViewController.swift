@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var opponents:[Opponent] = []
     
     override func viewDidLoad() {
@@ -19,10 +19,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     }
     
     @IBOutlet weak var tableView: UITableView!
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    
     func tableView(tableView: UITableView,
         cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
             var cell = tableView.dequeueReusableCellWithIdentifier("sportcell") as! UITableViewCell;
@@ -31,13 +28,16 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
             
             return cell
     }
+    
     func tableView(tableView: UITableView,
         numberOfRowsInSection section: Int) -> Int{
             return opponents.count
     }
+    
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 100
     }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier=="mainviewtransition"{
             if let destination=segue.destinationViewController as? SportsOptionPicker{

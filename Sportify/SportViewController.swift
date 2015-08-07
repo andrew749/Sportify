@@ -8,13 +8,15 @@
 
 import UIKit
 
-class SportViewController:UIViewController,ScoreDelegate{
+class SportViewController: UIViewController, ScoreDelegate{
+//    Interface builder elements
     @IBOutlet weak var awayScore: UILabel!
     @IBOutlet weak var homeScore: UILabel!
     @IBOutlet weak var awayTeamLabel: UILabel!
     @IBOutlet weak var homeTeamLabel: UILabel!
     @IBOutlet weak var awayCounter: UIView!
     @IBOutlet weak var homeCounter: UIView!
+    
     var awayCounterView:SportView?,homeCounterView:SportView?;
     var awayTeamName:String?
     var homeTeamName:String?
@@ -23,22 +25,12 @@ class SportViewController:UIViewController,ScoreDelegate{
     @IBOutlet weak var timeLabel: UILabel!
     var pointLimit:Int?
     var timeLimit:(Int,Int,Int)=(0,0,0)
-    var game:Sport
+    var game:Sport?
     var timerLabel:MZTimerLabel?
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
-        switch(sport!){
-        case SPORT_TYPE.SOCCER:
-            game=Soccer()
-        default:
-            game=Soccer()
-        }
-        timerLabel=MZTimerLabel(label: self.timeLabel, andTimerType: MZTimerLabelTypeTimer)
-        timerLabel!.timeFormat="HH:mm:ss"
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-    }
     @IBAction func startTimer(sender: AnyObject) {
         timerLabel?.start()
     }
+    
     func incrementScore(value:Int, homeTeam:Bool){
         if homeTeam{
             game.incrementScore(game.homeTeam)
@@ -78,23 +70,11 @@ class SportViewController:UIViewController,ScoreDelegate{
         homeCounterView?.frame=homeCounter.bounds
         awayCounterView?.frame=awayCounter.bounds
     }
-    required init(coder aDecoder: NSCoder) {
-        if let s = sport{
-        switch(sport!){
-        case SPORT_TYPE.SOCCER:
-            game=Soccer()
-        default:
-            game=Soccer()
-        }
-        }else{
-            sport=SPORT_TYPE.SOCCER
-            game=Soccer()
-        }
-        timerLabel=MZTimerLabel(label: self.timeLabel, andTimerType: MZTimerLabelTypeStopWatch)
-        timerLabel!.timeFormat="HH:mm:ss"
-        super.init(coder: aDecoder)
-    }
+
     override func viewDidLoad() {
+        game=Soccer()
+        timerLabel=MZTimerLabel(label: self.timeLabel, andTimerType: MZTimerLabelTypeTimer)
+        timerLabel!.timeFormat="HH:mm:ss"
         self.title=sportName
         let d=Double(timeLimit.0*3600)+Double(timeLimit.1*60)+Double(timeLimit.0)
         timerLabel!.setStopWatchTime(d)

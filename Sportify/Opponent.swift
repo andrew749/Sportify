@@ -14,7 +14,7 @@ class Opponent{
     var logo:UIImage?
 //    record details
     var record:(wins:Int, losses:Int, ties:Int)?
-    var detailedRecord:[Int, Int]?
+    var detailedRecord:[(scoreFor:Int, scoreAgainst:Int)]?
     
     init(name:String, logo:UIImage?){
         self.name = name
