@@ -9,9 +9,8 @@
 import UIKit
 import CoreData
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, DataSendingDelegate {
-//    var opponents:[Opponent] = []
     
-    var test = [NSManagedObject]()
+    var data = [NSManagedObject]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +27,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let fetchRequest =  NSFetchRequest(entityName: "Opponent")
         let fetchedResults = managedContext.executeFetchRequest(fetchRequest, error: nil) as? [NSManagedObject]
         if let results = fetchedResults {
-            test = results
+            data = results
         }
         tableView.reloadData()
     }
@@ -39,14 +38,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
             var cell = tableView.dequeueReusableCellWithIdentifier("sportcell") as! UITableViewCell;
             let row = indexPath.row
-            cell.textLabel?.text = test[row].valueForKey("name") as? String
+            cell.textLabel?.text = data[row].valueForKey("name") as? String
             
             return cell
     }
     
     func tableView(tableView: UITableView,
         numberOfRowsInSection section: Int) -> Int{
-            return test.count
+            return data.count
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -58,6 +57,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             if let destination=segue.destinationViewController as? SportsOptionPicker{
                     //TODO: Pass on the team data
                     destination.dataDelegate = self
+            }
+        }else if segue.identifier == "Team Detail View"{
+            if let destination = segue.destinationViewController as? TeamViewController{
+                destination.opponent = data[tableView.indexPathForSelectedRow()!.row]
             }
         }
     }
@@ -71,7 +74,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let opponent =  NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedContext)
         opponent.setValue(teamName, forKey: "name")
         managedContext.save(nil)
-        test.append(opponent)
+        data.append(opponent)
         tableView.reloadData()
     }
 

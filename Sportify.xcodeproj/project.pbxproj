@@ -19,7 +19,6 @@
 		B0388A171B38D5E900EFE79B /* ScoreDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0388A161B38D5E900EFE79B /* ScoreDelegate.swift */; };
 		B0388A1A1B38DBD400EFE79B /* SportView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0388A191B38DBD400EFE79B /* SportView.xib */; };
 		B051F2E51B7426580049F1FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B051F2E41B7426580049F1FC /* Main.storyboard */; };
-		B051F2E71B7429CF0049F1FC /* Opponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B051F2E61B7429CF0049F1FC /* Opponent.swift */; };
 		B051F2E91B742D480049F1FC /* TeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B051F2E81B742D480049F1FC /* TeamViewController.swift */; };
 		B051F2EC1B7434750049F1FC /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B051F2EB1B7434750049F1FC /* CoreData.framework */; };
 		B051F2EE1B7434BE0049F1FC /* DataSendingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B051F2ED1B7434BE0049F1FC /* DataSendingDelegate.swift */; };
@@ -60,7 +59,6 @@
 		B0388A191B38DBD400EFE79B /* SportView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SportView.xib; sourceTree = "<group>"; };
 		B04B8D221B42285E00569C05 /* Sportify-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Sportify-Bridging-Header.h"; sourceTree = "<group>"; };
 		B051F2E41B7426580049F1FC /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B051F2E61B7429CF0049F1FC /* Opponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Opponent.swift; sourceTree = "<group>"; };
 		B051F2E81B742D480049F1FC /* TeamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamViewController.swift; sourceTree = "<group>"; };
 		B051F2EB1B7434750049F1FC /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		B051F2ED1B7434BE0049F1FC /* DataSendingDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSendingDelegate.swift; sourceTree = "<group>"; };
@@ -209,7 +207,6 @@
 			children = (
 				B0388A161B38D5E900EFE79B /* ScoreDelegate.swift */,
 				B051F2ED1B7434BE0049F1FC /* DataSendingDelegate.swift */,
-				B051F2E61B7429CF0049F1FC /* Opponent.swift */,
 				B0693E9E1B2152D5005F1D93 /* Team.swift */,
 				B0693E961B215048005F1D93 /* Game.swift */,
 			);
@@ -362,7 +359,6 @@
 				B0693E971B215048005F1D93 /* Game.swift in Sources */,
 				B0DA76F91B3B7D2F00B31FAA /* SportView.swift in Sources */,
 				B0388A171B38D5E900EFE79B /* ScoreDelegate.swift in Sources */,
-				B051F2E71B7429CF0049F1FC /* Opponent.swift in Sources */,
 				B0693E951B215021005F1D93 /* SportViewController.swift in Sources */,
 				B051F2EE1B7434BE0049F1FC /* DataSendingDelegate.swift in Sources */,
 				B02802E11B72DCC80061F350 /* TutorialController.swift in Sources */,
