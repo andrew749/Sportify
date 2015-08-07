@@ -62,10 +62,10 @@
             </objects>
             <point key="canvasLocation" x="1236" y="969"/>
         </scene>
-        <!--View Controller-->
+        <!--Team View Controller-->
         <scene sceneID="WwD-pe-019">
             <objects>
-                <viewController id="Oti-SZ-QxY" sceneMemberID="viewController">
+                <viewController id="Oti-SZ-QxY" customClass="TeamViewController" customModule="Sportify" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3DD-jW-EFX"/>
                         <viewControllerLayoutGuide type="bottom" id="9SY-3Q-taP"/>
@@ -74,11 +74,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="hj5-Ya-SSV">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="hj5-Ya-SSV">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="105" id="qKp-vT-5du">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="headingCell" rowHeight="105" id="qKp-vT-5du">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qKp-vT-5du" id="S1a-is-FoF">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -89,7 +89,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mh2-zE-pe6">
+                                                <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mh2-zE-pe6">
                                                     <rect key="frame" x="359" y="0.0" width="233" height="105"/>
                                                 </imageView>
                                             </subviews>
@@ -106,27 +106,33 @@
                                             </variation>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="205" id="cFb-07-Q9K">
+                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="chartCell" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="chartCell" rowHeight="205" id="cFb-07-Q9K">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cFb-07-Q9K" id="gFr-0P-P2H">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" restorationIdentifier="ChartCell" translatesAutoresizingMaskIntoConstraints="NO" id="fjy-pS-6du">
-                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="205"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fjy-pS-6du">
+                                                    <rect key="frame" x="16" y="16" width="568" height="173"/>
+                                                    <color key="backgroundColor" red="0.21518271140414968" green="1" blue="0.075016591110570463" alpha="1" colorSpace="calibratedRGB"/>
                                                 </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="fjy-pS-6du" secondAttribute="trailing" constant="-8" id="8q7-ME-Ml7"/>
-                                                <constraint firstItem="fjy-pS-6du" firstAttribute="leading" secondItem="gFr-0P-P2H" secondAttribute="leadingMargin" constant="-8" id="AfG-tE-pVB"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="fjy-pS-6du" secondAttribute="bottom" constant="-8" id="Rec-hE-Q44"/>
-                                                <constraint firstItem="fjy-pS-6du" firstAttribute="top" secondItem="gFr-0P-P2H" secondAttribute="topMargin" constant="-8" id="Y3q-ST-Bp0"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="fjy-pS-6du" secondAttribute="trailing" constant="8" id="8q7-ME-Ml7"/>
+                                                <constraint firstItem="fjy-pS-6du" firstAttribute="leading" secondItem="gFr-0P-P2H" secondAttribute="leadingMargin" constant="8" id="AfG-tE-pVB"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="fjy-pS-6du" secondAttribute="bottom" constant="8" id="Rec-hE-Q44"/>
+                                                <constraint firstItem="fjy-pS-6du" firstAttribute="top" secondItem="gFr-0P-P2H" secondAttribute="topMargin" constant="8" id="Y3q-ST-Bp0"/>
                                                 <constraint firstAttribute="centerX" secondItem="fjy-pS-6du" secondAttribute="centerX" id="d2h-0T-h5P"/>
                                                 <constraint firstAttribute="centerY" secondItem="fjy-pS-6du" secondAttribute="centerY" id="rqH-Xs-sex"/>
                                             </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="d2h-0T-h5P"/>
+                                                    <exclude reference="rqH-Xs-sex"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="iIh-zB-uqu">
+                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="defaultCell" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="defaultCell" id="iIh-zB-uqu">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iIh-zB-uqu" id="182-dG-4Ab">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -136,9 +142,36 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="hj5-Ya-SSV" secondAttribute="trailing" constant="-16" id="2Ws-Uc-YW7"/>
+                            <constraint firstItem="hj5-Ya-SSV" firstAttribute="leading" secondItem="1tf-On-zIs" secondAttribute="leadingMargin" constant="-16" id="4Bb-za-V3w"/>
+                            <constraint firstItem="hj5-Ya-SSV" firstAttribute="top" secondItem="3DD-jW-EFX" secondAttribute="bottom" constant="-64" id="4TM-Fk-0Ab"/>
+                            <constraint firstItem="hj5-Ya-SSV" firstAttribute="top" secondItem="3DD-jW-EFX" secondAttribute="bottom" constant="-64" id="7jd-03-H1f"/>
+                            <constraint firstItem="hj5-Ya-SSV" firstAttribute="top" secondItem="3DD-jW-EFX" secondAttribute="bottom" constant="-64" id="Dd0-3u-VqO"/>
+                            <constraint firstItem="hj5-Ya-SSV" firstAttribute="top" secondItem="3DD-jW-EFX" secondAttribute="bottom" constant="-64" id="Z30-BG-xoa"/>
+                            <constraint firstItem="9SY-3Q-taP" firstAttribute="top" secondItem="hj5-Ya-SSV" secondAttribute="bottom" constant="-44" id="bUO-rN-HGa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hj5-Ya-SSV" secondAttribute="trailing" constant="-16" id="cPP-va-1Jt"/>
+                            <constraint firstItem="9SY-3Q-taP" firstAttribute="top" secondItem="hj5-Ya-SSV" secondAttribute="bottom" constant="-44" id="dOb-IQ-XUZ"/>
+                            <constraint firstItem="hj5-Ya-SSV" firstAttribute="leading" secondItem="1tf-On-zIs" secondAttribute="leadingMargin" constant="-16" id="tRq-oc-4l9"/>
+                            <constraint firstItem="hj5-Ya-SSV" firstAttribute="top" secondItem="3DD-jW-EFX" secondAttribute="bottom" constant="-64" id="uqM-NP-37a"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="4Bb-za-V3w"/>
+                                <exclude reference="4TM-Fk-0Ab"/>
+                                <exclude reference="Dd0-3u-VqO"/>
+                                <exclude reference="Z30-BG-xoa"/>
+                                <exclude reference="cPP-va-1Jt"/>
+                                <exclude reference="uqM-NP-37a"/>
+                                <exclude reference="bUO-rN-HGa"/>
+                            </mask>
+                        </variation>
                     </view>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="hj5-Ya-SSV" id="fl4-ki-SWi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="04V-mG-EW3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
