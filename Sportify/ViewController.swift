@@ -7,9 +7,11 @@
 //
 
 import UIKit
-
+import CoreData
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, DataSendingDelegate {
-    var opponents:[Opponent] = []
+//    var opponents:[Opponent] = []
+    
+    var test = [NSManagedObject]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,20 +22,31 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     }
     
+    override func viewWillAppear(animated: Bool) {
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let managedContext = appDelegate.managedObjectContext!
+        let fetchRequest =  NSFetchRequest(entityName: "Opponent")
+        let fetchedResults = managedContext.executeFetchRequest(fetchRequest, error: nil) as? [NSManagedObject]
+        if let results = fetchedResults {
+            test = results
+        }
+        tableView.reloadData()
+    }
+    
     @IBOutlet weak var tableView: UITableView!
     
     func tableView(tableView: UITableView,
         cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
             var cell = tableView.dequeueReusableCellWithIdentifier("sportcell") as! UITableViewCell;
             let row = indexPath.row
-            cell.textLabel?.text = opponents[row].name
+            cell.textLabel?.text = test[row].valueForKey("name") as? String
             
             return cell
     }
     
     func tableView(tableView: UITableView,
         numberOfRowsInSection section: Int) -> Int{
-            return opponents.count
+            return test.count
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -41,11 +54,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier=="mainviewtransition"{
+        if segue.identifier=="Create Opponent"{
             if let destination=segue.destinationViewController as? SportsOptionPicker{
-                if let index=tableView.indexPathForSelectedRow()?.row{
                     //TODO: Pass on the team data
-                }
+                    destination.dataDelegate = self
             }
         }
     }
@@ -53,7 +65,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     
     func sendData(teamName:String, teamLogo:UIImage?){
-        
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let managedContext = appDelegate.managedObjectContext!
+        let entity = NSEntityDescription.entityForName("Opponent", inManagedObjectContext: managedContext)
+        let opponent =  NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedContext)
+        opponent.setValue(teamName, forKey: "name")
+        managedContext.save(nil)
+        test.append(opponent)
+        tableView.reloadData()
     }
 
     

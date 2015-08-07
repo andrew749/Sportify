@@ -50,7 +50,7 @@
                     <navigationItem key="navigationItem" title="Opponents" id="YOd-WS-X7w">
                         <barButtonItem key="rightBarButtonItem" title="+" id="zhW-CM-4r6">
                             <connections>
-                                <segue destination="1Fm-Dt-1Jl" kind="presentation" id="Zsn-bX-uXo"/>
+                                <segue destination="1Fm-Dt-1Jl" kind="presentation" identifier="Create Opponent" id="Zsn-bX-uXo"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
