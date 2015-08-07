@@ -8,14 +8,16 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, DataSendingDelegate {
     var opponents:[Opponent] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //setup table view to use this controller
         tableView.delegate=self
         tableView.dataSource=self
-        // Do any additional setup after loading the view, typically from a nib.
+
     }
     
     @IBOutlet weak var tableView: UITableView!
@@ -47,5 +49,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             }
         }
     }
+    
+    
+    
+    func sendData(teamName:String, teamLogo:UIImage?){
+        
+    }
+
+    
 }
 

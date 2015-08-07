@@ -10,33 +10,32 @@ import Foundation
 import UIKit
 class SportsOptionPicker:UIViewController,UITextFieldDelegate{
 
-    var pickerData=[Int]()
-
     @IBOutlet weak var nameLabel: UITextField!
 
+    var dataDelegate:DataSendingDelegate?
  
+    @IBAction func createButtonClick(sender: AnyObject) {
+        if let teamName = nameLabel.text{
+            //TODO need to add logo selection method
+        
+            dataDelegate?.sendData(teamName, teamLogo: nil)
+            self.dismissViewControllerAnimated(true, completion: nil)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        for i in 1...200{
-            self.pickerData.append(i)
-        }
-        segControl.addTarget(self, action: "toggleSelectionView", forControlEvents: UIControlEvents.ValueChanged)
+      
         self.nameLabel.delegate=self
     }
+    
     func textFieldShouldReturn(textField: UITextField) -> Bool {
+        nameLabel.endEditing(true)
         return true;
     }
-    @IBOutlet weak var segControl: UISegmentedControl!
-    @IBOutlet weak var optionsView: UIView!
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if(segue.identifier=="gamestart"){
-            if let svc=segue.destinationViewController as? SportViewController{
-            }
-        }
     }
 }

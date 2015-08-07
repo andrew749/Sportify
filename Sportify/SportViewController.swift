@@ -25,7 +25,7 @@ class SportViewController: UIViewController, ScoreDelegate{
     @IBOutlet weak var timeLabel: UILabel!
     var pointLimit:Int?
     var timeLimit:(Int,Int,Int)=(0,0,0)
-    var game:Sport?
+    var game:Game = Game()
     var timerLabel:MZTimerLabel?
     @IBAction func startTimer(sender: AnyObject) {
         timerLabel?.start()
@@ -72,7 +72,6 @@ class SportViewController: UIViewController, ScoreDelegate{
     }
 
     override func viewDidLoad() {
-        game=Soccer()
         timerLabel=MZTimerLabel(label: self.timeLabel, andTimerType: MZTimerLabelTypeTimer)
         timerLabel!.timeFormat="HH:mm:ss"
         self.title=sportName
