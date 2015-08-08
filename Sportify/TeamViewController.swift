@@ -65,7 +65,8 @@ class TeamViewController:UIViewController, UITableViewDataSource, UITableViewDel
  
     func didFinishGame(playerScore:Int, opponentScore:Int){
         //TODO save score and update table view
-        print("didreceive data")
+        let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let managedContext = delegate.managedObjectContext
     }
     
 }

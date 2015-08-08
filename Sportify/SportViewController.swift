@@ -44,7 +44,7 @@ class SportViewController: UIViewController, ScoreDelegate{
         let ps:Int = playerScore.text!.toInt()!
         let os:Int = opponentScore.text!.toInt()!
         gameDelegate?.didFinishGame(ps, opponentScore: os)
-        self.dismissViewControllerAnimated(true, completion: nil)
+        self.navigationController?.popViewControllerAnimated(true)
     }
     func toggleTimer(){
         if timerLabel?.counting == true {
@@ -99,7 +99,7 @@ class SportViewController: UIViewController, ScoreDelegate{
     override func viewDidLoad() {
         timerLabel=MZTimerLabel(label: self.timeLabel, andTimerType: MZTimerLabelTypeStopWatch
         )
-        timerLabel!.timeFormat="HH:mm:ss"
+        timerLabel!.timeFormat="HH:mm:ss:SS"
         if let s = self.opponent?.valueForKey("name") as? String{
             self.opponentName.text=s
         }
