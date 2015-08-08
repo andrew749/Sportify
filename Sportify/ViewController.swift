@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, DataSendingDelegate {
     
-    var data = [NSManagedObject]()
+    var data = [Opponent]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,10 +25,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let managedContext = appDelegate.managedObjectContext!
         let fetchRequest =  NSFetchRequest(entityName: "Opponent")
-        let fetchedResults = managedContext.executeFetchRequest(fetchRequest, error: nil) as? [NSManagedObject]
-        if let results = fetchedResults {
-            data = results
-        }
+        let fetchedResults = managedContext.executeFetchRequest(fetchRequest, error: nil)
+//        if let results = fetchedResults {
+//            data = results
+//        }
         tableView.reloadData()
     }
     
@@ -38,7 +38,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
             var cell = tableView.dequeueReusableCellWithIdentifier("sportcell") as! UITableViewCell;
             let row = indexPath.row
-            cell.textLabel?.text = data[row].valueForKey("name") as? String
+            cell.textLabel?.text = data[row].name
             
             return cell
     }
@@ -83,10 +83,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let managedContext = appDelegate.managedObjectContext!
         let entity = NSEntityDescription.entityForName("Opponent", inManagedObjectContext: managedContext)
-        let opponent =  NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedContext)
-        opponent.setValue(teamName, forKey: "name")
+        let opponent = Opponent(entity: entity!, insertIntoManagedObjectContext: managedContext)
+        opponent.name = teamName
         if let logo = teamLogo{
-            opponent.setValue(UIImageJPEGRepresentation(logo, 1), forKey: "logo")
+            opponent.logo = UIImageJPEGRepresentation(logo, 1)
         }
         managedContext.save(nil)
         data.append(opponent)

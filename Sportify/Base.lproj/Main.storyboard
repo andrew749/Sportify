@@ -120,7 +120,6 @@
                                             <subviews>
                                                 <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fjy-pS-6du">
                                                     <rect key="frame" x="16" y="16" width="568" height="173"/>
-                                                    <color key="backgroundColor" red="0.21518271140414968" green="1" blue="0.075016591110570463" alpha="1" colorSpace="calibratedRGB"/>
                                                 </view>
                                             </subviews>
                                             <constraints>
@@ -145,13 +144,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lrx-RS-cmA">
-                                                    <rect key="frame" x="16" y="11.5" width="10" height="20.5"/>
+                                                    <rect key="frame" x="16" y="12" width="10" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YRF-q0-qeu">
-                                                    <rect key="frame" x="574" y="11.5" width="10" height="20.5"/>
+                                                    <rect key="frame" x="574" y="12" width="10" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -325,14 +324,12 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6hm-Nc-Zf6" customClass="SportView" customModule="Sportify" customModuleProvider="target">
                                 <rect key="frame" x="404" y="215" width="180" height="333"/>
-                                <color key="backgroundColor" red="0.78795796438988785" green="1" blue="0.94364842990931963" alpha="1" colorSpace="calibratedRGB"/>
                                 <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
                                     <rect key="frame" x="224" y="172" width="160" height="391"/>
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c5Q-IS-eFL" customClass="SportView" customModule="Sportify" customModuleProvider="target">
                                 <rect key="frame" x="16" y="215" width="180" height="333"/>
-                                <color key="backgroundColor" red="0.40388033269868906" green="1" blue="0.47398925330824182" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="281" id="FWh-No-eM4"/>
                                     <constraint firstAttribute="width" constant="300" id="ve5-4Z-Hax"/>
@@ -496,7 +493,6 @@
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xOu-Np-2kF">
                                 <rect key="frame" x="16" y="124" width="568" height="396"/>
-                                <color key="backgroundColor" red="0.79529597213786407" green="1" blue="0.53797589970466086" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J22-LR-eBq">
                                 <rect key="frame" x="63" y="91" width="30" height="30"/>

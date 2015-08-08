@@ -97,8 +97,7 @@ class SportViewController: UIViewController, ScoreDelegate{
     }
 
     override func viewDidLoad() {
-        timerLabel=MZTimerLabel(label: self.timeLabel, andTimerType: MZTimerLabelTypeStopWatch
-        )
+        timerLabel=MZTimerLabel(label: self.timeLabel, andTimerType: MZTimerLabelTypeStopWatch)
         timerLabel!.timeFormat="HH:mm:ss:SS"
         if let s = self.opponent?.valueForKey("name") as? String{
             self.opponentName.text=s
