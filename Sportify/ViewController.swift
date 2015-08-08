@@ -65,7 +65,19 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
     }
     
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
     
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.Delete{
+            tableView.beginUpdates()
+            deleteObjectAtIndex(indexPath.row)
+            data.removeAtIndex(indexPath.row)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Left)
+            tableView.endUpdates()
+        }
+    }
     
     func sendData(teamName:String, teamLogo:UIImage?){
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
@@ -78,6 +90,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         tableView.reloadData()
     }
 
+    func deleteObjectAtIndex(index:Int){
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let managedContext = appDelegate.managedObjectContext!
+
+        managedContext.deleteObject(data[index])
+    }
     
 }
 
