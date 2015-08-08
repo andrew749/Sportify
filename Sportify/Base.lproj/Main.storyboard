@@ -3,6 +3,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
@@ -83,21 +84,27 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qKp-vT-5du" id="S1a-is-FoF">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Team Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4h-5S-aKC">
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4h-5S-aKC">
                                                     <rect key="frame" x="8" y="42" width="92" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mh2-zE-pe6">
-                                                    <rect key="frame" x="359" y="0.0" width="233" height="105"/>
+                                                <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mh2-zE-pe6">
+                                                    <rect key="frame" x="487" y="0.0" width="105" height="105"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="mh2-zE-pe6" secondAttribute="height" multiplier="1:1" id="W2K-gA-neo"/>
+                                                    </constraints>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottomMargin" secondItem="mh2-zE-pe6" secondAttribute="bottom" constant="-8" id="1z6-oN-Bd3"/>
                                                 <constraint firstItem="mh2-zE-pe6" firstAttribute="top" secondItem="S1a-is-FoF" secondAttribute="topMargin" constant="-8" id="Mx6-xR-3CN"/>
                                                 <constraint firstItem="mh2-zE-pe6" firstAttribute="leading" secondItem="S1a-is-FoF" secondAttribute="leadingMargin" constant="351" id="dwb-dk-HQj"/>
+                                                <constraint firstItem="mh2-zE-pe6" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="g4h-5S-aKC" secondAttribute="trailing" constant="8" id="hZv-MA-fIp"/>
+                                                <constraint firstItem="g4h-5S-aKC" firstAttribute="leading" secondItem="S1a-is-FoF" secondAttribute="leadingMargin" id="ozI-w7-0zq"/>
                                                 <constraint firstItem="mh2-zE-pe6" firstAttribute="trailing" secondItem="S1a-is-FoF" secondAttribute="trailingMargin" id="wos-ss-ZbA"/>
+                                                <constraint firstAttribute="centerY" secondItem="g4h-5S-aKC" secondAttribute="centerY" constant="-0.25" id="yW4-Id-wRL"/>
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="constraints">
