@@ -460,23 +460,43 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xOu-Np-2kF">
+                                <rect key="frame" x="16" y="124" width="568" height="396"/>
+                                <color key="backgroundColor" red="0.79529597213786407" green="1" blue="0.53797589970466086" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J22-LR-eBq">
+                                <rect key="frame" x="63" y="91" width="30" height="30"/>
+                                <state key="normal" title="Add">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addButtonClick:" destination="1Fm-Dt-1Jl" eventType="touchUpInside" id="u0P-pm-RyQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="S5m-4X-w6M" firstAttribute="top" secondItem="obZ-sI-aZz" secondAttribute="bottom" constant="8" symbolic="YES" id="00c-BJ-WwM"/>
                             <constraint firstItem="obZ-sI-aZz" firstAttribute="leading" secondItem="DHH-nk-szA" secondAttribute="leadingMargin" id="4uK-8l-JzD"/>
                             <constraint firstItem="LRa-40-Fmz" firstAttribute="top" secondItem="3or-gb-5s4" secondAttribute="bottom" constant="8" symbolic="YES" id="4yK-L4-CYD"/>
+                            <constraint firstItem="J22-LR-eBq" firstAttribute="leading" secondItem="S5m-4X-w6M" secondAttribute="trailing" constant="8" symbolic="YES" id="6LR-dR-xqt"/>
                             <constraint firstItem="obZ-sI-aZz" firstAttribute="top" secondItem="byW-OM-isu" secondAttribute="bottom" constant="8" symbolic="YES" id="ABw-ia-O2b"/>
                             <constraint firstItem="obZ-sI-aZz" firstAttribute="trailing" secondItem="byW-OM-isu" secondAttribute="trailing" id="Sef-Te-FOA"/>
+                            <constraint firstItem="3or-gb-5s4" firstAttribute="top" secondItem="xOu-Np-2kF" secondAttribute="bottom" constant="8" symbolic="YES" id="Sg4-i1-a96"/>
                             <constraint firstItem="obZ-sI-aZz" firstAttribute="trailing" secondItem="3or-gb-5s4" secondAttribute="trailing" id="Vwn-Lu-dmn"/>
                             <constraint firstItem="byW-OM-isu" firstAttribute="top" secondItem="E0P-kG-SxI" secondAttribute="bottom" constant="8" symbolic="YES" id="WxO-Ak-KkW"/>
+                            <constraint firstItem="xOu-Np-2kF" firstAttribute="trailing" secondItem="obZ-sI-aZz" secondAttribute="trailing" id="ZlV-sC-K9U"/>
                             <constraint firstItem="byW-OM-isu" firstAttribute="leading" secondItem="obZ-sI-aZz" secondAttribute="leading" id="ZpP-hI-xFa"/>
                             <constraint firstItem="obZ-sI-aZz" firstAttribute="trailing" secondItem="DHH-nk-szA" secondAttribute="trailingMargin" id="aoW-IP-Bkd"/>
+                            <constraint firstItem="xOu-Np-2kF" firstAttribute="leading" secondItem="S5m-4X-w6M" secondAttribute="leading" id="bxG-Tj-1EQ"/>
                             <constraint firstItem="3or-gb-5s4" firstAttribute="leading" secondItem="S5m-4X-w6M" secondAttribute="leading" id="cIx-0e-fHu"/>
+                            <constraint firstItem="J22-LR-eBq" firstAttribute="baseline" secondItem="S5m-4X-w6M" secondAttribute="baseline" id="jLX-zF-jQo"/>
                             <constraint firstItem="S5m-4X-w6M" firstAttribute="leading" secondItem="obZ-sI-aZz" secondAttribute="leading" id="kig-QJ-j90"/>
+                            <constraint firstItem="xOu-Np-2kF" firstAttribute="top" secondItem="S5m-4X-w6M" secondAttribute="bottom" constant="8" symbolic="YES" id="n9Y-tA-a2t"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="mainImageView" destination="xOu-Np-2kF" id="3ox-E2-14i"/>
                         <outlet property="nameLabel" destination="obZ-sI-aZz" id="YTi-Sh-JqH"/>
                     </connections>
                 </viewController>

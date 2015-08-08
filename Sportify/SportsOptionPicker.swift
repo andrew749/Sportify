@@ -8,17 +8,19 @@
 
 import Foundation
 import UIKit
-class SportsOptionPicker:UIViewController,UITextFieldDelegate{
+class SportsOptionPicker:UIViewController,UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
 
     @IBOutlet weak var nameLabel: UITextField!
 
     var dataDelegate:DataSendingDelegate?
- 
+    var imagePicker:UIImagePickerController?
+    
+    var logo:UIImage?
     @IBAction func createButtonClick(sender: AnyObject) {
         if let teamName = nameLabel.text{
             //TODO need to add logo selection method
         
-            dataDelegate?.sendData(teamName, teamLogo: nil)
+            dataDelegate?.sendData(teamName, teamLogo: logo)
             self.dismissViewControllerAnimated(true, completion: nil)
         }
     }
@@ -27,6 +29,12 @@ class SportsOptionPicker:UIViewController,UITextFieldDelegate{
         super.viewDidLoad()
       
         self.nameLabel.delegate=self
+        
+        
+    }
+    
+    @IBAction func addButtonClick(sender: AnyObject) {
+        showPicker()
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
@@ -38,4 +46,18 @@ class SportsOptionPicker:UIViewController,UITextFieldDelegate{
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func showPicker(){
+        imagePicker = UIImagePickerController()
+        imagePicker?.delegate = self
+        imagePicker?.allowsEditing = true
+        imagePicker?.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+        self.presentViewController(imagePicker!, animated: true, completion: nil)
+    }
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
+        imagePicker?.dismissViewControllerAnimated(true, completion: nil)
+        logo = image
+        mainImageView.image = logo
+    }
+    @IBOutlet weak var mainImageView: UIImageView!
 }
