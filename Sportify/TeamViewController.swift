@@ -25,7 +25,12 @@ class TeamViewController:UIViewController, UITableViewDataSource, UITableViewDel
             cell = tableView.dequeueReusableCellWithIdentifier("headingCell")
             let label = cell?.viewWithTag(1)! as! UILabel
             label.text = opponent?.valueForKey("name") as? String
-            
+            let imageView = cell?.viewWithTag(2) as! UIImageView
+            if let logoData = opponent?.valueForKey("logo") as? NSData{
+                if let logo = UIImage(data: logoData){
+                    imageView.image = logo
+                }
+            }
         }else if row == 1{
             cell = tableView.dequeueReusableCellWithIdentifier("chartCell")
             let view = cell?.viewWithTag(1)

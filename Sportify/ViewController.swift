@@ -85,6 +85,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let entity = NSEntityDescription.entityForName("Opponent", inManagedObjectContext: managedContext)
         let opponent =  NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedContext)
         opponent.setValue(teamName, forKey: "name")
+        if let logo = teamLogo{
+            opponent.setValue(UIImageJPEGRepresentation(logo, 1), forKey: "logo")
+        }
         managedContext.save(nil)
         data.append(opponent)
         tableView.reloadData()
