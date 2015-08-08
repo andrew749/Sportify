@@ -17,7 +17,10 @@ class TeamViewController:UIViewController, UITableViewDataSource, UITableViewDel
         tableView.delegate = self
     }
     
-    var games:[NSManagedObject] = []
+    override func viewDidAppear(animated: Bool) {
+        games = opponent!.valueForKey("games") as! NSMutableSet
+    }
+    var games:NSMutableSet = NSMutableSet()
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let row = indexPath.row
         var cell:AnyObject?
@@ -39,6 +42,14 @@ class TeamViewController:UIViewController, UITableViewDataSource, UITableViewDel
             cell = tableView.dequeueReusableCellWithIdentifier("newCell")
         }else {
             cell = tableView.dequeueReusableCellWithIdentifier("defaultCell")
+            if let games = opponent?.valueForKey("games") as? NSSet{
+                let againstLabel = cell?.viewWithTag(1) as? UILabel
+//                againstLabel?.text = (games.allObjects[indexPath.row-2] as? NSManagedObject)?.valueForKey("scoreAgainst")
+                againstLabel?.text = "please"
+                let forLabel = cell?.viewWithTag(2) as? UILabel
+//                forLabel?.text =  (games.allObjects[indexPath.row-2] as? NSManagedObject)?.valueForKey("scoreFor")
+                forLabel?.text = "Why"
+            }
         }
         return cell as! UITableViewCell
     }
@@ -71,7 +82,18 @@ class TeamViewController:UIViewController, UITableViewDataSource, UITableViewDel
     func didFinishGame(playerScore:Int, opponentScore:Int){
         //TODO save score and update table view
         let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        let managedContext = delegate.managedObjectContext
+        let managedContext = delegate.managedObjectContext!
+        let entity = NSEntityDescription.entityForName("Game", inManagedObjectContext: managedContext)
+        let game =  NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedContext)
+        game.setValue(opponentScore, forKey: "scoreAgainst")
+        game.setValue(playerScore, forKey: "scoreFor")
+        let newSet = opponent?.valueForKey("games") as! NSMutableSet
+        newSet.addObject(game)
+        opponent?.setValue(newSet, forKey: "games")
+        managedContext.save(nil)
+        games = newSet
+        tableView.reloadData()
+        
     }
     
 }

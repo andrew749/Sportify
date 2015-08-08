@@ -27,7 +27,7 @@ class SportViewController: UIViewController, ScoreDelegate{
     @IBOutlet weak var timeLabel: UILabel!
     
     
-    var game:Game = Game()
+    var game:GameModel = GameModel()
     var timerLabel:MZTimerLabel?
     
     @IBOutlet weak var startButton: UIButton!
