@@ -26,9 +26,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let managedContext = appDelegate.managedObjectContext!
         let fetchRequest =  NSFetchRequest(entityName: "Opponent")
         let fetchedResults = managedContext.executeFetchRequest(fetchRequest, error: nil)
-//        if let results = fetchedResults {
-//            data = results
-//        }
+        data = [Opponent]()
+        if let results = fetchedResults{
+            for result in results {
+                if let tempResult = result as? Opponent{
+                    data.append(tempResult)
+                }
+            }
+        }
         tableView.reloadData()
     }
     
@@ -82,7 +87,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func sendData(teamName:String, teamLogo:UIImage?){
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let managedContext = appDelegate.managedObjectContext!
-        let entity = NSEntityDescription.entityForName("Opponent", inManagedObjectContext: managedContext)
+        let entity = NSEntityDescription.entityForName("Opponent", inManagedObjectContext: managedContext);
         let opponent = Opponent(entity: entity!, insertIntoManagedObjectContext: managedContext)
         opponent.name = teamName
         if let logo = teamLogo{

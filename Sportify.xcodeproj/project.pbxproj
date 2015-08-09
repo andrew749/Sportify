@@ -27,9 +27,9 @@
 		B0693E951B215021005F1D93 /* SportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0693E941B215021005F1D93 /* SportViewController.swift */; };
 		B0693E971B215048005F1D93 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0693E961B215048005F1D93 /* GameModel.swift */; };
 		B0693E9F1B2152D5005F1D93 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0693E9E1B2152D5005F1D93 /* Team.swift */; };
+		B09764681B778EFF007BBC60 /* Opponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09764661B778EFF007BBC60 /* Opponent.swift */; };
+		B09764691B778EFF007BBC60 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09764671B778EFF007BBC60 /* Game.swift */; };
 		B0B2E7AC1B2670C500952C9E /* SportsOptionPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B2E7AB1B2670C500952C9E /* SportsOptionPicker.swift */; };
-		B0BD2B801B75B0B000812EB5 /* Opponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BD2B7F1B75B0B000812EB5 /* Opponent.swift */; };
-		B0BD2B821B75B0B000812EB5 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BD2B811B75B0B000812EB5 /* Game.swift */; };
 		B0DA76F91B3B7D2F00B31FAA /* SportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DA76F81B3B7D2F00B31FAA /* SportView.swift */; };
 /* End PBXBuildFile section */
 
@@ -70,9 +70,9 @@
 		B0693E941B215021005F1D93 /* SportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportViewController.swift; sourceTree = "<group>"; };
 		B0693E961B215048005F1D93 /* GameModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 		B0693E9E1B2152D5005F1D93 /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		B09764661B778EFF007BBC60 /* Opponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Opponent.swift; sourceTree = "<group>"; };
+		B09764671B778EFF007BBC60 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		B0B2E7AB1B2670C500952C9E /* SportsOptionPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportsOptionPicker.swift; sourceTree = "<group>"; };
-		B0BD2B7F1B75B0B000812EB5 /* Opponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Opponent.swift; sourceTree = "<group>"; };
-		B0BD2B811B75B0B000812EB5 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		B0DA76F81B3B7D2F00B31FAA /* SportView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportView.swift; sourceTree = "<group>"; };
 		CD7EE00CCD4F6E1CE1981A3D /* Pods-Sportify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sportify.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sportify/Pods-Sportify.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -211,8 +211,8 @@
 		B0693E9A1B215126005F1D93 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				B0BD2B811B75B0B000812EB5 /* Game.swift */,
-				B0BD2B7F1B75B0B000812EB5 /* Opponent.swift */,
+				B09764661B778EFF007BBC60 /* Opponent.swift */,
+				B09764671B778EFF007BBC60 /* Game.swift */,
 				B0388A161B38D5E900EFE79B /* ScoreDelegate.swift */,
 				B051F2ED1B7434BE0049F1FC /* DataSendingDelegate.swift */,
 				B051F2F21B744F0C0049F1FC /* GameDelegate.swift */,
@@ -362,9 +362,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B01EF3DD1B1D478D005A17B3 /* ViewController.swift in Sources */,
-				B0BD2B821B75B0B000812EB5 /* Game.swift in Sources */,
+				B09764691B778EFF007BBC60 /* Game.swift in Sources */,
 				B0693E9F1B2152D5005F1D93 /* Team.swift in Sources */,
-				B0BD2B801B75B0B000812EB5 /* Opponent.swift in Sources */,
+				B09764681B778EFF007BBC60 /* Opponent.swift in Sources */,
 				B0B2E7AC1B2670C500952C9E /* SportsOptionPicker.swift in Sources */,
 				B01EF3DB1B1D478D005A17B3 /* AppDelegate.swift in Sources */,
 				B0693E971B215048005F1D93 /* GameModel.swift in Sources */,
