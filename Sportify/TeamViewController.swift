@@ -9,46 +9,57 @@
 import Foundation
 import CoreData
 class TeamViewController:UIViewController, UITableViewDataSource, UITableViewDelegate, GameDelegate{
-    var opponent :NSManagedObject?
+    var opponent :Opponent?
     
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         tableView.dataSource = self
         tableView.delegate = self
+        games = opponent!.games
+
     }
     
     override func viewDidAppear(animated: Bool) {
-        games = opponent!.valueForKey("games") as! NSMutableSet
+        games = opponent!.games
     }
-    var games:NSMutableSet = NSMutableSet()
+    
+    var games:NSSet = NSSet()
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let row = indexPath.row
         var cell:AnyObject?
         if row == 0{
             cell = tableView.dequeueReusableCellWithIdentifier("headingCell")
             let label = cell?.viewWithTag(1)! as! UILabel
-            label.text = opponent?.valueForKey("name") as? String
             let imageView = cell?.viewWithTag(2) as! UIImageView
-            if let logoData = opponent?.valueForKey("logo") as? NSData{
+
+            label.text = opponent?.name
+            if let logoData = opponent?.logo{
                 if let logo = UIImage(data: logoData){
                     imageView.image = logo
                 }
             }
+            
         }else if row == 1{
+            
             cell = tableView.dequeueReusableCellWithIdentifier("chartCell")
             let view = cell?.viewWithTag(1)
             view?.backgroundColor = UIColor.redColor()
+            
         }else if row == games.count + 2{
+            
             cell = tableView.dequeueReusableCellWithIdentifier("newCell")
+            
         }else {
+            
             cell = tableView.dequeueReusableCellWithIdentifier("defaultCell")
-            if let games = opponent?.valueForKey("games") as? NSSet{
+            if let tempGames = opponent?.games{
                 let againstLabel = cell?.viewWithTag(1) as? UILabel
-//                againstLabel?.text = (games.allObjects[indexPath.row-2] as? NSManagedObject)?.valueForKey("scoreAgainst")
-                againstLabel?.text = "please"
                 let forLabel = cell?.viewWithTag(2) as? UILabel
-//                forLabel?.text =  (games.allObjects[indexPath.row-2] as? NSManagedObject)?.valueForKey("scoreFor")
-                forLabel?.text = "Why"
+
+//                againstLabel?.text = (tempGames.allObjects[indexPath.row-2] as? Game)?.scoreAgainst
+//                forLabel?.text =  (tempGames.allObjects[indexPath.row-2] as? Game)?.scoreFor
+
             }
         }
         return cell as! UITableViewCell
@@ -84,13 +95,14 @@ class TeamViewController:UIViewController, UITableViewDataSource, UITableViewDel
         let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let managedContext = delegate.managedObjectContext!
         let entity = NSEntityDescription.entityForName("Game", inManagedObjectContext: managedContext)
-        let game =  NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedContext)
-        game.setValue(opponentScore, forKey: "scoreAgainst")
-        game.setValue(playerScore, forKey: "scoreFor")
-        let newSet = opponent?.valueForKey("games") as! NSMutableSet
+        let game =  Game(entity: entity!, insertIntoManagedObjectContext: managedContext)
+        game.scoreAgainst = opponentScore
+        game.scoreFor = playerScore
+        let newSet = opponent?.games as! NSMutableSet
         newSet.addObject(game)
-        opponent?.setValue(newSet, forKey: "games")
-        managedContext.save(nil)
+        opponent?.games = newSet
+        var error:NSError? =  nil
+        managedContext.save(&error)
         games = newSet
         tableView.reloadData()
         
