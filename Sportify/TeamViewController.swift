@@ -98,7 +98,7 @@ class TeamViewController:UIViewController, UITableViewDataSource, UITableViewDel
         let game =  Game(entity: entity!, insertIntoManagedObjectContext: managedContext)
         game.scoreAgainst = opponentScore
         game.scoreFor = playerScore
-        let newSet = opponent?.games as! NSMutableSet
+        var newSet = opponent?.games as! NSMutableSet
         newSet.addObject(game)
         opponent?.games = newSet
         var error:NSError? =  nil
