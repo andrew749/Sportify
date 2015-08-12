@@ -101,6 +101,7 @@ class TeamViewController:UIViewController, UITableViewDataSource, UITableViewDel
         var newSet = opponent?.games as! NSMutableSet
         newSet.addObject(game)
         opponent?.games = newSet
+        game.opponent = opponent!
         var error:NSError? =  nil
         managedContext.save(&error)
         games = newSet

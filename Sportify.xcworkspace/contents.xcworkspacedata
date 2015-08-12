@@ -2,12 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Sportify/Opponent.swift">
-   </FileRef>
-   <FileRef
-      location = "group:Sportify/Game.swift">
-   </FileRef>
-   <FileRef
       location = "group:Sportify.xcodeproj">
    </FileRef>
    <FileRef
