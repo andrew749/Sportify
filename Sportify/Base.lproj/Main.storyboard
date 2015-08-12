@@ -113,13 +113,13 @@
                                             </variation>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="chartCell" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="chartCell" rowHeight="205" id="cFb-07-Q9K">
+                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="chartCell" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="chartCell" rowHeight="283" id="cFb-07-Q9K">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cFb-07-Q9K" id="gFr-0P-P2H">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fjy-pS-6du">
-                                                    <rect key="frame" x="16" y="16" width="568" height="173"/>
+                                                    <rect key="frame" x="16" y="16" width="568" height="251"/>
                                                 </view>
                                             </subviews>
                                             <constraints>

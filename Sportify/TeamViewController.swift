@@ -8,15 +8,18 @@
 
 import Foundation
 import CoreData
-class TeamViewController:UIViewController, UITableViewDataSource, UITableViewDelegate, GameDelegate{
+class TeamViewController:UIViewController, UITableViewDataSource, UITableViewDelegate, GameDelegate, JBChartViewDataSource, JBChartViewDelegate{
     var opponent :Opponent?
-    
+    var chartView:JBChartView?
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         tableView.dataSource = self
         tableView.delegate = self
         games = opponent!.games
-
+        chartView = JBBarChartView()
+        chartView!.dataSource = self
+        chartView!.delegate = self
+        
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -44,8 +47,9 @@ class TeamViewController:UIViewController, UITableViewDataSource, UITableViewDel
             
             cell = tableView.dequeueReusableCellWithIdentifier("chartCell")
             let view = cell?.viewWithTag(1)
-            view?.backgroundColor = UIColor.redColor()
-            
+            view?.addSubview(chartView!)
+            chartView?.frame = view!.bounds
+            chartView?.reloadData()
         }else if row == games.count + 2{
             
             cell = tableView.dequeueReusableCellWithIdentifier("newCell")
@@ -110,5 +114,15 @@ class TeamViewController:UIViewController, UITableViewDataSource, UITableViewDel
         tableView.reloadData()
         
     }
+//    MARK: ChartViewDelegate and DataSource
+
+    func numberOfBarsInBarChartView(barChartView:JBBarChartView)-> UInt32
+    {
+        return UInt32(games.count)
+    }
     
+    func barChartView(barChartView: JBBarChartView, heightForBarViewAtIndex index: UInt) -> CGFloat {
+        println("barChartView", index);
+        return 100.0
+    }
 }

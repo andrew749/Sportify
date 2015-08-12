@@ -10,4 +10,7 @@
 #define Sportify_Sportify_Bridging_Header_h
 
 #import <MZTimerLabel/MZTimerLabel.h>
+#import "JBChartView.h"
+#import "JBBarChartView.h"
+#import "JBLineChartView.h"
 #endif

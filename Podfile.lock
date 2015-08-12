@@ -1,10 +1,13 @@
 PODS:
+  - JBChartView (2.8.15)
   - MZTimerLabel (0.5.2)
 
 DEPENDENCIES:
+  - JBChartView
   - MZTimerLabel
 
 SPEC CHECKSUMS:
+  JBChartView: d77d6a713a32547b24ccfaeba90958e7274f0c9d
   MZTimerLabel: 1bce6b93ec9f017fffad7ea7ee2bc721b53b64ee
 
 COCOAPODS: 0.37.2
