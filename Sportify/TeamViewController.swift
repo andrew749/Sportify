@@ -46,10 +46,12 @@ class TeamViewController:UIViewController, UITableViewDataSource, UITableViewDel
         }else if row == 1{
             
             cell = tableView.dequeueReusableCellWithIdentifier("chartCell")
-            let view = cell?.viewWithTag(1)
-            view?.addSubview(chartView!)
-            chartView?.frame = view!.bounds
+            let viewholder = cell?.viewWithTag(1)
+            viewholder?.addSubview(chartView!)
+            chartView?.frame = viewholder!.bounds
             chartView?.reloadData()
+            
+            
         }else if row == games.count + 2{
             
             cell = tableView.dequeueReusableCellWithIdentifier("newCell")
@@ -81,7 +83,7 @@ class TeamViewController:UIViewController, UITableViewDataSource, UITableViewDel
         case 0:
             return 100
         case 1:
-            return 200
+            return 300
         default:
             return 50
         }
@@ -122,7 +124,22 @@ class TeamViewController:UIViewController, UITableViewDataSource, UITableViewDel
     }
     
     func barChartView(barChartView: JBBarChartView, heightForBarViewAtIndex index: UInt) -> CGFloat {
-        println("barChartView", index);
-        return 100.0
+        let game = games.allObjects[Int(index)] as! Game
+        
+        let scoreDifference:CGFloat = CGFloat(game.scoreFor.intValue - game.scoreAgainst.intValue)
+        return abs(scoreDifference)
+    }
+    
+    func barChartView(barChartView: JBBarChartView, colorForBarViewAtIndex index:UInt) -> UIColor{
+        let game = games.allObjects[Int(index)] as! Game
+
+        let scoreDifference = game.scoreFor.intValue - game.scoreAgainst.intValue
+        if (scoreDifference > 0){
+            return UIColor.greenColor()
+        }else if(scoreDifference < 0){
+            return UIColor.redColor()
+        }else{
+            return UIColor.blueColor()
+        }
     }
 }

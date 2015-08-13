@@ -76,7 +76,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="hj5-Ya-SSV">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="headingCell" rowHeight="105" id="qKp-vT-5du">
@@ -113,25 +113,33 @@
                                             </variation>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="chartCell" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="chartCell" rowHeight="283" id="cFb-07-Q9K">
+                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="chartCell" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="chartCell" rowHeight="300" id="cFb-07-Q9K">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cFb-07-Q9K" id="gFr-0P-P2H">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fjy-pS-6du">
-                                                    <rect key="frame" x="16" y="16" width="568" height="251"/>
+                                                    <rect key="frame" x="8" y="8" width="584" height="284"/>
                                                 </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="fjy-pS-6du" secondAttribute="trailing" constant="8" id="8q7-ME-Ml7"/>
-                                                <constraint firstItem="fjy-pS-6du" firstAttribute="leading" secondItem="gFr-0P-P2H" secondAttribute="leadingMargin" constant="8" id="AfG-tE-pVB"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="fjy-pS-6du" secondAttribute="bottom" constant="8" id="Rec-hE-Q44"/>
-                                                <constraint firstItem="fjy-pS-6du" firstAttribute="top" secondItem="gFr-0P-P2H" secondAttribute="topMargin" constant="8" id="Y3q-ST-Bp0"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="fjy-pS-6du" secondAttribute="trailing" id="8q7-ME-Ml7"/>
+                                                <constraint firstItem="fjy-pS-6du" firstAttribute="top" secondItem="gFr-0P-P2H" secondAttribute="topMargin" id="9RH-gK-TAJ"/>
+                                                <constraint firstItem="fjy-pS-6du" firstAttribute="leading" secondItem="gFr-0P-P2H" secondAttribute="leadingMargin" id="AfG-tE-pVB"/>
+                                                <constraint firstItem="fjy-pS-6du" firstAttribute="trailing" secondItem="gFr-0P-P2H" secondAttribute="trailingMargin" id="L7M-Kx-hXL"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="fjy-pS-6du" secondAttribute="bottom" id="Rec-hE-Q44"/>
+                                                <constraint firstItem="fjy-pS-6du" firstAttribute="top" secondItem="gFr-0P-P2H" secondAttribute="topMargin" id="Y3q-ST-Bp0"/>
                                                 <constraint firstAttribute="centerX" secondItem="fjy-pS-6du" secondAttribute="centerX" id="d2h-0T-h5P"/>
+                                                <constraint firstItem="fjy-pS-6du" firstAttribute="bottom" secondItem="gFr-0P-P2H" secondAttribute="bottomMargin" id="lIe-kV-3ub"/>
                                                 <constraint firstAttribute="centerY" secondItem="fjy-pS-6du" secondAttribute="centerY" id="rqH-Xs-sex"/>
+                                                <constraint firstItem="fjy-pS-6du" firstAttribute="leading" secondItem="gFr-0P-P2H" secondAttribute="leadingMargin" id="wwy-tE-7Gz"/>
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="constraints">
+                                                    <exclude reference="8q7-ME-Ml7"/>
+                                                    <exclude reference="AfG-tE-pVB"/>
+                                                    <exclude reference="Rec-hE-Q44"/>
+                                                    <exclude reference="Y3q-ST-Bp0"/>
                                                     <exclude reference="d2h-0T-h5P"/>
                                                     <exclude reference="rqH-Xs-sex"/>
                                                 </mask>
@@ -209,7 +217,7 @@
                             <constraint firstItem="hj5-Ya-SSV" firstAttribute="top" secondItem="3DD-jW-EFX" secondAttribute="bottom" constant="-64" id="Z30-BG-xoa"/>
                             <constraint firstItem="9SY-3Q-taP" firstAttribute="top" secondItem="hj5-Ya-SSV" secondAttribute="bottom" constant="-44" id="bUO-rN-HGa"/>
                             <constraint firstAttribute="trailingMargin" secondItem="hj5-Ya-SSV" secondAttribute="trailing" constant="-16" id="cPP-va-1Jt"/>
-                            <constraint firstItem="9SY-3Q-taP" firstAttribute="top" secondItem="hj5-Ya-SSV" secondAttribute="bottom" constant="-44" id="dOb-IQ-XUZ"/>
+                            <constraint firstItem="9SY-3Q-taP" firstAttribute="top" secondItem="hj5-Ya-SSV" secondAttribute="bottom" id="dOb-IQ-XUZ"/>
                             <constraint firstItem="hj5-Ya-SSV" firstAttribute="leading" secondItem="1tf-On-zIs" secondAttribute="leadingMargin" constant="-16" id="tRq-oc-4l9"/>
                             <constraint firstItem="hj5-Ya-SSV" firstAttribute="top" secondItem="3DD-jW-EFX" secondAttribute="bottom" constant="-64" id="uqM-NP-37a"/>
                         </constraints>
