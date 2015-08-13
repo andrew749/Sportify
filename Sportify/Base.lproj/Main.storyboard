@@ -332,7 +332,7 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6hm-Nc-Zf6" customClass="SportView" customModule="Sportify" customModuleProvider="target">
                                 <rect key="frame" x="404" y="215" width="180" height="333"/>
-                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                <variation key="widthClass=compact" misplaced="YES">
                                     <rect key="frame" x="224" y="172" width="160" height="391"/>
                                 </variation>
                             </view>
@@ -348,7 +348,7 @@
                                         <exclude reference="ve5-4Z-Hax"/>
                                     </mask>
                                 </variation>
-                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                <variation key="widthClass=compact" misplaced="YES">
                                     <rect key="frame" x="16" y="172" width="160" height="391"/>
                                 </variation>
                             </view>

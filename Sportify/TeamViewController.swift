@@ -24,6 +24,7 @@ class TeamViewController:UIViewController, UITableViewDataSource, UITableViewDel
     
     override func viewDidAppear(animated: Bool) {
         games = opponent!.games
+        chartView?.reloadData()
     }
     
     var games:NSSet = NSSet()
@@ -48,6 +49,7 @@ class TeamViewController:UIViewController, UITableViewDataSource, UITableViewDel
             cell = tableView.dequeueReusableCellWithIdentifier("chartCell")
             let viewholder = cell?.viewWithTag(1)
             viewholder?.addSubview(chartView!)
+            chartView?.autoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleLeftMargin
             chartView?.frame = viewholder!.bounds
             chartView?.reloadData()
             
