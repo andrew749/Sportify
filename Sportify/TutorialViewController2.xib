@@ -11,21 +11,51 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get Ready" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3cm-UY-2wp">
-                    <rect key="frame" x="204" y="8" width="193" height="103"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get Set" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3cm-UY-2wp">
+                    <rect key="frame" x="8" y="8" width="584" height="100"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="193" id="j8b-3N-OqF"/>
-                        <constraint firstAttribute="height" constant="103" id="vs3-xQ-CdN"/>
+                        <constraint firstAttribute="height" constant="100" id="vs3-xQ-CdN"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="IowanOldStyle-Roman" family="Iowan Old Style" pointSize="39"/>
+                    <fontDescription key="fontDescription" name="IowanOldStyle-Roman" family="Iowan Old Style" pointSize="35"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="j8b-3N-OqF"/>
+                        </mask>
+                    </variation>
                 </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Navigate to a team to view statistics and to start a match" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8j9-jn-B1k">
+                    <rect key="frame" x="8" y="116" width="584" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tDR-Ch-IFK">
+                    <rect key="frame" x="8" y="145" width="288" height="447"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="w12-dj-7rN">
+                    <rect key="frame" x="304" y="145" width="288" height="447"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="1" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
+                <constraint firstItem="w12-dj-7rN" firstAttribute="width" secondItem="tDR-Ch-IFK" secondAttribute="width" id="3fO-XE-lwb"/>
+                <constraint firstItem="w12-dj-7rN" firstAttribute="top" secondItem="8j9-jn-B1k" secondAttribute="bottom" constant="8" id="42c-Ms-j3A"/>
+                <constraint firstItem="8j9-jn-B1k" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="8Ch-JS-1My"/>
                 <constraint firstItem="3cm-UY-2wp" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="99g-ny-Sh4"/>
+                <constraint firstAttribute="trailing" secondItem="8j9-jn-B1k" secondAttribute="trailing" constant="8" id="OPJ-aQ-lAx"/>
+                <constraint firstAttribute="trailing" secondItem="w12-dj-7rN" secondAttribute="trailing" constant="8" id="UFu-g7-UD3"/>
+                <constraint firstAttribute="bottom" secondItem="w12-dj-7rN" secondAttribute="bottom" constant="8" id="ULC-0m-des"/>
+                <constraint firstAttribute="trailing" secondItem="3cm-UY-2wp" secondAttribute="trailing" constant="8" id="eQI-xP-ei1"/>
+                <constraint firstItem="3cm-UY-2wp" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="h2H-0j-ZUU"/>
+                <constraint firstItem="w12-dj-7rN" firstAttribute="leading" secondItem="tDR-Ch-IFK" secondAttribute="trailing" constant="8" id="iTt-RR-UdV"/>
+                <constraint firstAttribute="bottom" secondItem="tDR-Ch-IFK" secondAttribute="bottom" constant="8" id="lUf-K7-gsp"/>
+                <constraint firstItem="8j9-jn-B1k" firstAttribute="top" secondItem="3cm-UY-2wp" secondAttribute="bottom" constant="8" id="ozG-Fh-a6O"/>
                 <constraint firstItem="3cm-UY-2wp" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="topMargin" id="sge-mM-Ikf"/>
+                <constraint firstItem="tDR-Ch-IFK" firstAttribute="top" secondItem="8j9-jn-B1k" secondAttribute="bottom" constant="8" id="xDl-Q6-zbi"/>
+                <constraint firstItem="tDR-Ch-IFK" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="yHR-yw-zjU"/>
             </constraints>
             <point key="canvasLocation" x="569" y="506"/>
         </view>

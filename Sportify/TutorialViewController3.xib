@@ -11,21 +11,51 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Almost There !!!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DEi-Qr-yXc">
-                    <rect key="frame" x="189" y="8" width="222" height="84"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Go" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DEi-Qr-yXc">
+                    <rect key="frame" x="8" y="8" width="584" height="100"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="222" id="rom-dC-A6i"/>
-                        <constraint firstAttribute="height" constant="84" id="xMw-Fp-9oO"/>
+                        <constraint firstAttribute="height" constant="100" id="xMw-Fp-9oO"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="29"/>
+                    <fontDescription key="fontDescription" name="IowanOldStyle-Roman" family="Iowan Old Style" pointSize="35"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="rom-dC-A6i"/>
+                        </mask>
+                    </variation>
                 </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="After creating a new game, your all set to play. Hit Done when complete." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5xV-wh-75J">
+                    <rect key="frame" x="8" y="116" width="584" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="koM-bs-ZvK">
+                    <rect key="frame" x="8" y="145" width="288" height="448"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4s2-Uq-5GT">
+                    <rect key="frame" x="304" y="145" width="288" height="448"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="0.12348614929415953" green="0.76963758167594376" blue="0.05037433941327684" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
+                <constraint firstItem="koM-bs-ZvK" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="0nb-5v-0bp"/>
+                <constraint firstItem="4s2-Uq-5GT" firstAttribute="leading" secondItem="koM-bs-ZvK" secondAttribute="trailing" constant="8" id="2rL-lb-HtJ"/>
+                <constraint firstAttribute="bottom" secondItem="koM-bs-ZvK" secondAttribute="bottom" constant="8" id="45p-V3-lTA"/>
+                <constraint firstItem="5xV-wh-75J" firstAttribute="top" secondItem="DEi-Qr-yXc" secondAttribute="bottom" constant="8" id="8Ma-vt-CWB"/>
+                <constraint firstAttribute="trailing" secondItem="4s2-Uq-5GT" secondAttribute="trailing" constant="8" id="ASH-Xx-pvN"/>
+                <constraint firstItem="5xV-wh-75J" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="Uf1-Ec-Uyd"/>
+                <constraint firstItem="DEi-Qr-yXc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="Vcz-4w-owN"/>
+                <constraint firstAttribute="trailing" secondItem="5xV-wh-75J" secondAttribute="trailing" constant="8" id="XSK-wE-ado"/>
+                <constraint firstAttribute="trailing" secondItem="DEi-Qr-yXc" secondAttribute="trailing" constant="8" id="eOt-Ml-grd"/>
+                <constraint firstItem="koM-bs-ZvK" firstAttribute="top" secondItem="5xV-wh-75J" secondAttribute="bottom" constant="8" id="gR3-ee-VgQ"/>
+                <constraint firstItem="koM-bs-ZvK" firstAttribute="width" secondItem="4s2-Uq-5GT" secondAttribute="width" id="gj0-fz-tyf"/>
                 <constraint firstItem="DEi-Qr-yXc" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="hu6-dw-Dzc"/>
                 <constraint firstItem="DEi-Qr-yXc" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="topMargin" id="ldT-Nl-nF9"/>
+                <constraint firstItem="4s2-Uq-5GT" firstAttribute="top" secondItem="5xV-wh-75J" secondAttribute="bottom" constant="8" id="qsL-kk-ZtO"/>
+                <constraint firstAttribute="bottom" secondItem="4s2-Uq-5GT" secondAttribute="bottom" constant="8" id="tR0-Ve-D7C"/>
             </constraints>
         </view>
     </objects>

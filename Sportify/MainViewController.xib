@@ -11,23 +11,54 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sportify" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gal-i2-4ic">
-                    <rect key="frame" x="206" y="8" width="188" height="68"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sportify" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gal-i2-4ic">
+                    <rect key="frame" x="8" y="8" width="584" height="100"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="188" id="F7C-1N-3GM"/>
-                        <constraint firstAttribute="height" constant="68" id="d5x-SE-UVs"/>
+                        <constraint firstAttribute="height" constant="100" id="d5x-SE-UVs"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="Superclarendon-Regular" family="Superclarendon" pointSize="38"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="F7C-1N-3GM"/>
+                        </mask>
+                    </variation>
                 </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to a new way to track sports scores." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gNa-TZ-xad">
+                    <rect key="frame" x="8" y="116" width="584" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xXy-MQ-H9z">
+                    <rect key="frame" x="8" y="145" width="584" height="447"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="Gal-i2-4ic" firstAttribute="centerX" secondItem="ZpM-T6-4BR" secondAttribute="centerX" id="0AL-4v-6Lx"/>
+                <constraint firstItem="Gal-i2-4ic" firstAttribute="width" secondItem="gNa-TZ-xad" secondAttribute="width" id="APc-Xv-XLK"/>
+                <constraint firstItem="xXy-MQ-H9z" firstAttribute="top" secondItem="gNa-TZ-xad" secondAttribute="bottom" constant="8" id="EHq-0e-Buo"/>
+                <constraint firstAttribute="trailing" secondItem="gNa-TZ-xad" secondAttribute="trailing" constant="8" id="G4L-8F-aJG"/>
+                <constraint firstAttribute="trailing" secondItem="xXy-MQ-H9z" secondAttribute="trailing" constant="8" id="IfB-Hm-cjU"/>
+                <constraint firstItem="gNa-TZ-xad" firstAttribute="leading" secondItem="ZpM-T6-4BR" secondAttribute="leading" constant="8" id="MeC-bL-Jpk"/>
+                <constraint firstAttribute="bottom" secondItem="xXy-MQ-H9z" secondAttribute="bottom" constant="8" id="WdH-wf-Rrp"/>
+                <constraint firstItem="xXy-MQ-H9z" firstAttribute="leading" secondItem="ZpM-T6-4BR" secondAttribute="leading" constant="8" id="dSu-K1-HBO"/>
                 <constraint firstItem="Gal-i2-4ic" firstAttribute="top" secondItem="ZpM-T6-4BR" secondAttribute="topMargin" id="dwV-4h-0Og"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="gNa-TZ-xad" secondAttribute="bottom" constant="8" id="fha-Vw-feA"/>
+                <constraint firstItem="gNa-TZ-xad" firstAttribute="top" secondItem="Gal-i2-4ic" secondAttribute="bottom" constant="8" id="ob2-Wy-YU3"/>
             </constraints>
             <point key="canvasLocation" x="670" y="418"/>
         </view>
+        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xfg-5r-aJW">
+            <rect key="frame" x="0.0" y="0.0" width="42" height="21"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+            <nil key="highlightedColor"/>
+            <point key="canvasLocation" x="695" y="535.5"/>
+        </label>
     </objects>
 </document>

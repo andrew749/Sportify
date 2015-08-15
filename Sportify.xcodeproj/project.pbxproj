@@ -24,6 +24,7 @@
 		B051F2EE1B7434BE0049F1FC /* DataSendingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B051F2ED1B7434BE0049F1FC /* DataSendingDelegate.swift */; };
 		B051F2F11B7435DE0049F1FC /* SportifyData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B051F2EF1B7435DE0049F1FC /* SportifyData.xcdatamodeld */; };
 		B051F2F31B744F0C0049F1FC /* GameDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B051F2F21B744F0C0049F1FC /* GameDelegate.swift */; };
+		B05EE48B1B7EE1CB004D23ED /* TutorialViewController1.xib in Resources */ = {isa = PBXBuildFile; fileRef = B05EE48A1B7EE1CB004D23ED /* TutorialViewController1.xib */; };
 		B0693E951B215021005F1D93 /* SportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0693E941B215021005F1D93 /* SportViewController.swift */; };
 		B0693E971B215048005F1D93 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0693E961B215048005F1D93 /* GameModel.swift */; };
 		B0693E9F1B2152D5005F1D93 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0693E9E1B2152D5005F1D93 /* Team.swift */; };
@@ -67,6 +68,7 @@
 		B051F2ED1B7434BE0049F1FC /* DataSendingDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSendingDelegate.swift; sourceTree = "<group>"; };
 		B051F2F01B7435DE0049F1FC /* SportifyData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SportifyData.xcdatamodel; sourceTree = "<group>"; };
 		B051F2F21B744F0C0049F1FC /* GameDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameDelegate.swift; sourceTree = "<group>"; };
+		B05EE48A1B7EE1CB004D23ED /* TutorialViewController1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TutorialViewController1.xib; sourceTree = "<group>"; };
 		B0693E941B215021005F1D93 /* SportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportViewController.swift; sourceTree = "<group>"; };
 		B0693E961B215048005F1D93 /* GameModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 		B0693E9E1B2152D5005F1D93 /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				B02802E41B72DE7C0061F350 /* MainViewController.xib */,
+				B05EE48A1B7EE1CB004D23ED /* TutorialViewController1.xib */,
 				B01B09931B72F043008DF350 /* TutorialViewController2.xib */,
 				B01B09951B72F61B008DF350 /* TutorialViewController3.xib */,
 			);
@@ -308,6 +311,7 @@
 				B01B09941B72F043008DF350 /* TutorialViewController2.xib in Resources */,
 				B01B09961B72F61B008DF350 /* TutorialViewController3.xib in Resources */,
 				B0388A1A1B38DBD400EFE79B /* SportView.xib in Resources */,
+				B05EE48B1B7EE1CB004D23ED /* TutorialViewController1.xib in Resources */,
 				B051F2E51B7426580049F1FC /* Main.storyboard in Resources */,
 				B01EF3E21B1D478D005A17B3 /* Images.xcassets in Resources */,
 				B02802E51B72DE7C0061F350 /* MainViewController.xib in Resources */,

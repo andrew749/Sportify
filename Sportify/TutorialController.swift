@@ -10,7 +10,7 @@ import Foundation
 
 class TutorialController:UIViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource{
     var tutorialPageController:UIPageViewController?
-    let xibNames = ["MainViewController","TutorialViewController2", "TutorialViewController3"]
+    let xibNames = ["MainViewController","TutorialViewController1","TutorialViewController2", "TutorialViewController3"]
     var tutorialControllers: [UIViewController]?
     var index = 0
     init(){
