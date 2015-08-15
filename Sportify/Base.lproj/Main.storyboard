@@ -103,8 +103,8 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mh2-zE-pe6">
-                                                    <rect key="frame" x="504" y="8" width="89" height="89"/>
+                                                <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mh2-zE-pe6">
+                                                    <rect key="frame" x="503" y="8" width="89" height="89"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="mh2-zE-pe6" secondAttribute="height" multiplier="1:1" id="W2K-gA-neo"/>
                                                     </constraints>
@@ -164,8 +164,8 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0Z2-Z1-G6P" id="Uer-f3-cRi">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Against" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PJ6-9p-2FO">
-                                                    <rect key="frame" x="531" y="11" width="68" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Against" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PJ6-9p-2FO">
+                                                    <rect key="frame" x="535" y="12" width="58" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="44" id="R87-hl-tSu"/>
                                                     </constraints>

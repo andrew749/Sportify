@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
         }else{
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            controller = storyboard.instantiateViewControllerWithIdentifier("mainsequence") as! UIViewController
+            controller = storyboard.instantiateViewControllerWithIdentifier("mainsequence") as? UIViewController
         }
         
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
