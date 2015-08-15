@@ -16,9 +16,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        var controller:UIViewController?
+        if !NSUserDefaults.standardUserDefaults().boolForKey("hasFirstLaunch"){
+            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "hasFirstLaunch")
+            NSUserDefaults.standardUserDefaults().synchronize()
+            controller = TutorialController()
+            
+        }else{
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            controller = storyboard.instantiateViewControllerWithIdentifier("mainsequence") as! UIViewController
+        }
+        
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        var controller = TutorialController()
-        self.window?.rootViewController = controller
+        self.window?.rootViewController = controller!
         self.window?.makeKeyAndVisible()
         return true
     }
