@@ -49,7 +49,7 @@ class TeamViewController:UIViewController, UITableViewDataSource, UITableViewDel
             cell = tableView.dequeueReusableCellWithIdentifier("chartCell")
             let viewholder = cell?.viewWithTag(1)
             viewholder?.addSubview(chartView!)
-            chartView?.autoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleLeftMargin
+            chartView?.autoresizingMask = UIViewAutoresizing.FlexibleWidth
             chartView?.frame = viewholder!.bounds
             chartView?.reloadData()
             
