@@ -54,7 +54,11 @@ class TeamViewController:UIViewController, UITableViewDataSource, UITableViewDel
             chartView?.reloadData()
             
             
-        }else if row == games.count + 2{
+        }else if row == 2{
+            
+            cell = tableView.dequeueReusableCellWithIdentifier("listheading")
+            
+        }else if row == games.count + 3{
             
             cell = tableView.dequeueReusableCellWithIdentifier("newCell")
             
@@ -65,7 +69,7 @@ class TeamViewController:UIViewController, UITableViewDataSource, UITableViewDel
                 let againstLabel = cell?.viewWithTag(1) as! UILabel
                 let forLabel = cell?.viewWithTag(2) as! UILabel
                 
-                if let againstScore = (tempGames.allObjects[indexPath.row-2] as? Game)?.scoreAgainst, let forScore = (tempGames.allObjects[indexPath.row-2] as? Game)?.scoreFor{
+                if let againstScore = (tempGames.allObjects[indexPath.row-3] as? Game)?.scoreAgainst, let forScore = (tempGames.allObjects[indexPath.row-3] as? Game)?.scoreFor{
                     againstLabel.text = String(stringInterpolationSegment: againstScore)
                     forLabel.text = String(stringInterpolationSegment: forScore)
                 }
@@ -76,7 +80,7 @@ class TeamViewController:UIViewController, UITableViewDataSource, UITableViewDel
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return games.count + 3
+        return games.count + 4
     }
     
     
