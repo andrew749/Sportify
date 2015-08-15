@@ -28,6 +28,19 @@
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fH3-Tx-9SC" id="AIL-mg-wD6">
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="u2V-mG-ZrQ">
+                                                    <rect key="frame" x="510" y="8" width="82" height="82"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="u2V-mG-ZrQ" secondAttribute="height" multiplier="1:1" id="YpP-L3-Y8d"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="u2V-mG-ZrQ" firstAttribute="bottom" secondItem="AIL-mg-wD6" secondAttribute="bottomMargin" id="GLk-eE-c9G"/>
+                                                <constraint firstItem="u2V-mG-ZrQ" firstAttribute="top" secondItem="AIL-mg-wD6" secondAttribute="topMargin" id="aIT-Rg-1yF"/>
+                                                <constraint firstItem="u2V-mG-ZrQ" firstAttribute="trailing" secondItem="AIL-mg-wD6" secondAttribute="trailingMargin" id="v3N-hQ-4rV"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <segue destination="Oti-SZ-QxY" kind="show" identifier="Team Detail View" id="KB1-yh-9aF"/>
@@ -166,7 +179,7 @@
                                                     </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="For" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VWX-AK-UM4">
-                                                    <rect key="frame" x="8" y="11.5" width="25.5" height="20.5"/>
+                                                    <rect key="frame" x="8" y="12" width="26" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>

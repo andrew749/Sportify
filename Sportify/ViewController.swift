@@ -44,7 +44,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             var cell = tableView.dequeueReusableCellWithIdentifier("sportcell") as! UITableViewCell;
             let row = indexPath.row
             cell.textLabel?.text = data[row].name
-            
+            let imageView = cell.viewWithTag(3) as? UIImageView
+            if let iv = imageView{
+//                if let image = data[row].logo{
+                    iv.image = UIImage(data: data[row].logo)
+//                }
+            }
             return cell
     }
     
