@@ -74,9 +74,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1236" y="969"/>
+            <point key="canvasLocation" x="1245" y="969"/>
         </scene>
-        <!--Team View Controller-->
+        <!--Details-->
         <scene sceneID="WwD-pe-019">
             <objects>
                 <viewController id="Oti-SZ-QxY" customClass="TeamViewController" customModule="Sportify" customModuleProvider="target" sceneMemberID="viewController">
@@ -289,6 +289,13 @@
                         </variation>
                     </view>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Details" id="Mh5-DE-qgu">
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="3hn-qu-A0h">
+                            <connections>
+                                <segue destination="1Fm-Dt-1Jl" kind="presentation" identifier="Edit Opponent" id="cdb-XB-Ne2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="hj5-Ya-SSV" id="fl4-ki-SWi"/>
@@ -296,7 +303,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="04V-mG-EW3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2000" y="969"/>
+            <point key="canvasLocation" x="2131" y="969"/>
         </scene>
         <!--Sport View Controller-->
         <scene sceneID="QXB-O9-YdZ">
@@ -507,7 +514,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oHM-oT-15T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2000" y="1735"/>
+            <point key="canvasLocation" x="2131" y="1735"/>
         </scene>
         <!--Sport-->
         <scene sceneID="ion-84-DYu">
@@ -529,7 +536,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3or-gb-5s4">
                                 <rect key="frame" x="16" y="528" width="568" height="64"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="43"/>
-                                <state key="normal" title="Create">
+                                <state key="normal" title="Save">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -548,15 +555,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xOu-Np-2kF">
                                 <rect key="frame" x="16" y="160" width="568" height="360"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J22-LR-eBq">
-                                <rect key="frame" x="63" y="127" width="30" height="30"/>
-                                <state key="normal" title="Add">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="addButtonClick:" destination="1Fm-Dt-1Jl" eventType="touchUpInside" id="u0P-pm-RyQ"/>
-                                </connections>
-                            </button>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EST-pD-WNN">
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <items>
@@ -576,13 +574,22 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J22-LR-eBq">
+                                <rect key="frame" x="554" y="127" width="30" height="30"/>
+                                <state key="normal" title="Add">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addButtonClick:" destination="1Fm-Dt-1Jl" eventType="touchUpInside" id="u0P-pm-RyQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="S5m-4X-w6M" firstAttribute="top" secondItem="obZ-sI-aZz" secondAttribute="bottom" constant="8" symbolic="YES" id="00c-BJ-WwM"/>
+                            <constraint firstItem="J22-LR-eBq" firstAttribute="baseline" secondItem="S5m-4X-w6M" secondAttribute="baseline" id="2pj-NY-S4X"/>
                             <constraint firstItem="obZ-sI-aZz" firstAttribute="leading" secondItem="DHH-nk-szA" secondAttribute="leadingMargin" id="4uK-8l-JzD"/>
                             <constraint firstItem="LRa-40-Fmz" firstAttribute="top" secondItem="3or-gb-5s4" secondAttribute="bottom" constant="8" symbolic="YES" id="4yK-L4-CYD"/>
-                            <constraint firstItem="J22-LR-eBq" firstAttribute="leading" secondItem="S5m-4X-w6M" secondAttribute="trailing" constant="8" symbolic="YES" id="6LR-dR-xqt"/>
                             <constraint firstItem="obZ-sI-aZz" firstAttribute="top" secondItem="byW-OM-isu" secondAttribute="bottom" constant="8" symbolic="YES" id="ABw-ia-O2b"/>
                             <constraint firstItem="EST-pD-WNN" firstAttribute="leading" secondItem="DHH-nk-szA" secondAttribute="leadingMargin" constant="-16" id="IAs-Wz-yLR"/>
                             <constraint firstItem="obZ-sI-aZz" firstAttribute="trailing" secondItem="byW-OM-isu" secondAttribute="trailing" id="Sef-Te-FOA"/>
@@ -596,7 +603,7 @@
                             <constraint firstItem="xOu-Np-2kF" firstAttribute="leading" secondItem="S5m-4X-w6M" secondAttribute="leading" id="bxG-Tj-1EQ"/>
                             <constraint firstItem="3or-gb-5s4" firstAttribute="leading" secondItem="S5m-4X-w6M" secondAttribute="leading" id="cIx-0e-fHu"/>
                             <constraint firstAttribute="trailingMargin" secondItem="EST-pD-WNN" secondAttribute="trailing" constant="-16" id="fGR-dV-XNQ"/>
-                            <constraint firstItem="J22-LR-eBq" firstAttribute="baseline" secondItem="S5m-4X-w6M" secondAttribute="baseline" id="jLX-zF-jQo"/>
+                            <constraint firstItem="J22-LR-eBq" firstAttribute="trailing" secondItem="obZ-sI-aZz" secondAttribute="trailing" id="fk0-6b-W26"/>
                             <constraint firstItem="S5m-4X-w6M" firstAttribute="leading" secondItem="obZ-sI-aZz" secondAttribute="leading" id="kig-QJ-j90"/>
                             <constraint firstItem="EST-pD-WNN" firstAttribute="top" secondItem="E0P-kG-SxI" secondAttribute="bottom" id="mop-DL-eo1"/>
                             <constraint firstItem="xOu-Np-2kF" firstAttribute="top" secondItem="S5m-4X-w6M" secondAttribute="bottom" constant="8" symbolic="YES" id="n9Y-tA-a2t"/>
@@ -608,6 +615,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="addButton" destination="J22-LR-eBq" id="ZJI-cd-sxr"/>
                         <outlet property="mainImageView" destination="xOu-Np-2kF" id="3ox-E2-14i"/>
                         <outlet property="nameLabel" destination="obZ-sI-aZz" id="YTi-Sh-JqH"/>
                     </connections>
@@ -636,4 +644,7 @@
             <point key="canvasLocation" x="388" y="969"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="cdb-XB-Ne2"/>
+    </inferredMetricsTieBreakers>
 </document>

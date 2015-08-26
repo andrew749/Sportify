@@ -16,6 +16,7 @@ class SportsOptionPicker:UIViewController,UITextFieldDelegate, UIImagePickerCont
     var imagePicker:UIImagePickerController?
     
     var logo:UIImage?
+    var name:String?
     @IBAction func createButtonClick(sender: AnyObject) {
         if let teamName = nameLabel.text{
             //TODO need to add logo selection method
@@ -28,14 +29,21 @@ class SportsOptionPicker:UIViewController,UITextFieldDelegate, UIImagePickerCont
     @IBAction func cancelClick(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-      
         self.nameLabel.delegate=self
+        if let tempName = self.name{
+            self.nameLabel.text = tempName
+        }
         
+        if let tempImage = self.logo{
+            self.mainImageView.image = tempImage
+        }
         
     }
     
+    @IBOutlet weak var addButton: UIButton!
     @IBAction func addButtonClick(sender: AnyObject) {
         showPicker()
     }
@@ -45,11 +53,6 @@ class SportsOptionPicker:UIViewController,UITextFieldDelegate, UIImagePickerCont
         return true;
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     func showPicker(){
         imagePicker = UIImagePickerController()
         imagePicker?.delegate = self
@@ -57,10 +60,15 @@ class SportsOptionPicker:UIViewController,UITextFieldDelegate, UIImagePickerCont
         imagePicker?.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
         self.presentViewController(imagePicker!, animated: true, completion: nil)
     }
+    
     func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
         imagePicker?.dismissViewControllerAnimated(true, completion: nil)
         logo = image
         mainImageView.image = logo
+        if (image != nil){
+            addButton.setTitle("Edit", forState: UIControlState.Normal)
+        }
     }
+    
     @IBOutlet weak var mainImageView: UIImageView!
 }

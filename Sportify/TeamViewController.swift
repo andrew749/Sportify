@@ -8,7 +8,7 @@
 
 import Foundation
 import CoreData
-class TeamViewController:UIViewController, UITableViewDataSource, UITableViewDelegate, GameDelegate, JBChartViewDataSource, JBChartViewDelegate{
+class TeamViewController:UIViewController, UITableViewDataSource, UITableViewDelegate, GameDelegate, JBChartViewDataSource, JBChartViewDelegate, DataSendingDelegate{
     var opponent :Opponent?
     var chartView:JBChartView?
     @IBOutlet weak var tableView: UITableView!
@@ -28,6 +28,13 @@ class TeamViewController:UIViewController, UITableViewDataSource, UITableViewDel
     }
     
     var games:NSSet = NSSet()
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        //check if it is a game result
+        if (indexPath.row > games.count + 3 && indexPath.row < tableView.numberOfRowsInSection(0)){
+            
+        }
+    }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let row = indexPath.row
@@ -101,6 +108,12 @@ class TeamViewController:UIViewController, UITableViewDataSource, UITableViewDel
                 destination.opponent = opponent
                 destination.gameDelegate = self
             }
+        }else if segue.identifier == "Edit Opponent"{
+            if let destination = segue.destinationViewController as? SportsOptionPicker{
+                destination.name = opponent?.name
+                destination.logo = UIImage(data: opponent!.logo)
+                destination.dataDelegate = self
+            }
         }
     }
  
@@ -148,4 +161,21 @@ class TeamViewController:UIViewController, UITableViewDataSource, UITableViewDel
             return UIColor.blueColor()
         }
     }
+    
+    func barSelectionColorForBarChartView(barChartView:JBBarChartView)->UIColor{
+        return UIColor.yellowColor()
+    }
+//  MARK: DataSendingDelegate
+    
+    func sendData(teamName:String, teamLogo:UIImage?){
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let managedContext = appDelegate.managedObjectContext!
+        opponent!.name = teamName
+        if let logo = teamLogo{
+            opponent!.logo = UIImageJPEGRepresentation(logo, 1)
+        }
+        managedContext.save(nil)
+        tableView.reloadData()
+    }
+    
 }
