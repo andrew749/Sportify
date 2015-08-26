@@ -39,6 +39,7 @@ class SportsOptionPicker:UIViewController,UITextFieldDelegate, UIImagePickerCont
         
         if let tempImage = self.logo{
             self.mainImageView.image = tempImage
+            self.addButton.setTitle("+", forState: UIControlState.Normal)
         }
         
     }
