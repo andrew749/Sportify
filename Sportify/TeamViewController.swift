@@ -145,8 +145,8 @@ class TeamViewController:UIViewController, UITableViewDataSource, UITableViewDel
     func barChartView(barChartView: JBBarChartView, heightForBarViewAtIndex index: UInt) -> CGFloat {
         let game = games.allObjects[Int(index)] as! Game
         
-        let scoreDifference:CGFloat = CGFloat(game.scoreFor.intValue - game.scoreAgainst.intValue)
-        return abs(scoreDifference)
+        let scoreDifference = abs(game.scoreFor.intValue - game.scoreAgainst.intValue)
+        return CGFloat(scoreDifference)
     }
     
     func barChartView(barChartView: JBBarChartView, colorForBarViewAtIndex index:UInt) -> UIColor{
