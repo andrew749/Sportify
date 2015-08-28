@@ -108,6 +108,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let managedContext = appDelegate.managedObjectContext!
 
         managedContext.deleteObject(data[index])
+        managedContext.save(nil)
     }
     
 }
