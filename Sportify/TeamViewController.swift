@@ -73,8 +73,8 @@ class TeamViewController:UIViewController, UITableViewDataSource, UITableViewDel
             
             cell = tableView.dequeueReusableCellWithIdentifier("defaultCell")
             if let tempGames = opponent?.games{
-                let againstLabel = cell?.viewWithTag(1) as! UILabel
-                let forLabel = cell?.viewWithTag(2) as! UILabel
+                let againstLabel = cell?.viewWithTag(2) as! UILabel
+                let forLabel = cell?.viewWithTag(1) as! UILabel
                 
                 if let againstScore = (tempGames.allObjects[indexPath.row-3] as? Game)?.scoreAgainst, let forScore = (tempGames.allObjects[indexPath.row-3] as? Game)?.scoreFor{
                     againstLabel.text = String(stringInterpolationSegment: againstScore)
